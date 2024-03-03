@@ -1,0 +1,18 @@
+﻿[
+    {
+        "taskText": "Найти большую коробку",
+        "objectName": "Box"
+    },
+    {
+        "taskText": "Найти кружку",
+        "objectName": "Mug"
+    },
+    {
+        "taskText": "Найти чайник",
+        "objectName": "Kettle"
+    },
+    {
+        "taskText": "—",
+        "objectName": "123456"
+    }
+]
