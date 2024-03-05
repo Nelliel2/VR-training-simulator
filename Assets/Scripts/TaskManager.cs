@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-//using Newtonsoft.Json;
+using Valve.Newtonsoft.Json;
 using System.IO;
 
 public class TaskManager : MonoBehaviour
 {
 
-    public TMP_Text textTask;
-    public TMP_Text textScore;
+    public TextMesh textTask;
+    public TextMesh textScore;
     public int score = 0;
 
     List<Task> tasks;
@@ -17,8 +17,8 @@ public class TaskManager : MonoBehaviour
 
     void Start()
     {
-        textTask = GameObject.Find("TaskText").GetComponent<TMP_Text>();
-        textScore = GameObject.Find("ScoreText").GetComponent<TMP_Text>();
+        textTask = GameObject.Find("TaskText").GetComponent<TextMesh>();
+        textScore = GameObject.Find("ScoreText").GetComponent<TextMesh>();
         LoadJsonTasks();
         ChangeTask();
     }
@@ -28,7 +28,7 @@ public class TaskManager : MonoBehaviour
         using (StreamReader r = new StreamReader("Tasks.json"))
         {
             string json = r.ReadToEnd();
-            //tasks = JsonConvert.DeserializeObject<List<Task>>(json);
+            tasks = JsonConvert.DeserializeObject<List<Task>>(json);
         }
 
     }

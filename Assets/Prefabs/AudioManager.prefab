@@ -1,0 +1,165 @@
+%YAML 1.1
+--- !u!1 &5943186739292503586
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5943186739292503580}
+  - component: {fileID: 5943186739292503587}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5943186739292503580
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5943186739292503586}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.643201, y: 3.748657, z: -48.132015}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5943186739292503587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5943186739292503586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 331ff50dbf00e68419eb1966d9bc39fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: openDoor
+    clip: {fileID: 8300000, guid: a9486c0c1d4661f4ca829d3a1ba8e6df, type: 3}
+    volume: 0.715
+    pitch: 1.39
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: background
+    clip: {fileID: 8300000, guid: 5b078b4952528d149ad9533983b4c677, type: 3}
+    volume: 0.148
+    pitch: 1.37
+    loop: 1
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: playerSteps
+    clip: {fileID: 8300000, guid: 5290a8f7ecfd6124da268c4fd94d408e, type: 3}
+    volume: 1
+    pitch: 1.37
+    loop: 1
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: closeDoor
+    clip: {fileID: 8300000, guid: 556058a146ebc5e4ea5f02e553e947f2, type: 3}
+    volume: 1
+    pitch: 1.37
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: closed
+    clip: {fileID: 8300000, guid: 2fe9943c103a2f049a998bc543475207, type: 3}
+    volume: 1
+    pitch: 1.37
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: openCase
+    clip: {fileID: 8300000, guid: bd34833784b239345b28a72cf900fc59, type: 3}
+    volume: 1
+    pitch: 1.37
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: closeCase
+    clip: {fileID: 8300000, guid: f9bf6eb7b686a394ab734ac14df322cb, type: 3}
+    volume: 1
+    pitch: 1.37
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: buttonClick
+    clip: {fileID: 8300000, guid: 36059141714213a4cb5477e29386bbcb, type: 3}
+    volume: 1
+    pitch: 1.37
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: gemUp
+    clip: {fileID: 8300000, guid: 079aa45976758314fa452b4119487488, type: 3}
+    volume: 1
+    pitch: 1.37
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: gemDown
+    clip: {fileID: 8300000, guid: 2c67891d82202b84a84220dd1223f04d, type: 3}
+    volume: 0.5
+    pitch: 3
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: boxUp
+    clip: {fileID: 8300000, guid: 7a552d96930812041a84b00ea3428b5f, type: 3}
+    volume: 0.069
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: boxDown
+    clip: {fileID: 8300000, guid: c76dc8917ac731241a36799af9b3bcd7, type: 3}
+    volume: 1
+    pitch: 3
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: inBox
+    clip: {fileID: 8300000, guid: 363671b5efbcc7d4f93fcc5636017acf, type: 3}
+    volume: 1
+    pitch: 2
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: outBox
+    clip: {fileID: 8300000, guid: 7f8068beb08589d4183eb8a6a89c3e6e, type: 3}
+    volume: 0.281
+    pitch: 1.26
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: DefUp
+    clip: {fileID: 8300000, guid: bc5bc51341628f84b9346dfc622db68f, type: 3}
+    volume: 0.799
+    pitch: 2
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: DefDown
+    clip: {fileID: 8300000, guid: 53590d64556969f4bb33eea53cceffc0, type: 3}
+    volume: 0.799
+    pitch: 2
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: Complete
+    clip: {fileID: 8300000, guid: 46bbb24782907e4459a5011dbc6a15f0, type: 3}
+    volume: 0.205
+    pitch: 1.294
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
