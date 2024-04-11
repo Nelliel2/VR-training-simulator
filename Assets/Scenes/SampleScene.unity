@@ -1161,6 +1161,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: c842ffb53ab45a84c96a9776b9f5be64, type: 3}
   m_PrefabInstance: {fileID: 332895745}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &354733355 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1499310753839832, guid: 491d82b1acc78ba4d95af96a6fe1b5a8, type: 3}
+  m_PrefabInstance: {fileID: 7770029747160808009}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &367395285
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4194,7 +4199,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!154 &1452737616
 TerrainCollider:
   m_ObjectHideFlags: 0
@@ -7709,10 +7714,6 @@ PrefabInstance:
       value: Wooden_Stand_B (10)
       objectReference: {fileID: 0}
     - target: {fileID: 4351209550710614, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
-      propertyPath: m_RootOrder
-      value: 115
-      objectReference: {fileID: 0}
-    - target: {fileID: 4351209550710614, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -8343,7 +8344,7 @@ Transform:
   m_GameObject: {fileID: 1730751678729194791}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.13999939, y: -5.89143, z: -5.6601424}
+  m_LocalPosition: {x: 0.13999939, y: 5.151, z: -5.6601424}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8692,10 +8693,6 @@ PrefabInstance:
       value: Cement_B (30)
       objectReference: {fileID: 0}
     - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
-      propertyPath: m_RootOrder
-      value: 101
-      objectReference: {fileID: 0}
-    - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.6713371
       objectReference: {fileID: 0}
@@ -8751,10 +8748,6 @@ PrefabInstance:
     - target: {fileID: 1153904038062340, guid: 36185661c9efc3744a17898686b687bf, type: 3}
       propertyPath: m_Name
       value: Garbage (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4616418588631314, guid: 36185661c9efc3744a17898686b687bf, type: 3}
-      propertyPath: m_RootOrder
-      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 4616418588631314, guid: 36185661c9efc3744a17898686b687bf, type: 3}
       propertyPath: m_LocalScale.x
@@ -10420,10 +10413,6 @@ PrefabInstance:
       value: Wooden_Stand_B (13)
       objectReference: {fileID: 0}
     - target: {fileID: 4351209550710614, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
-      propertyPath: m_RootOrder
-      value: 115
-      objectReference: {fileID: 0}
-    - target: {fileID: 4351209550710614, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -10515,10 +10504,6 @@ PrefabInstance:
     - target: {fileID: 1841898010600736, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
       propertyPath: m_Name
       value: Wooden_Stand_B (9)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4351209550710614, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
-      propertyPath: m_RootOrder
-      value: 115
       objectReference: {fileID: 0}
     - target: {fileID: 4351209550710614, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11371,10 +11356,6 @@ PrefabInstance:
     - target: {fileID: 1841898010600736, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
       propertyPath: m_Name
       value: Wooden_Stand_B (14)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4351209550710614, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
-      propertyPath: m_RootOrder
-      value: 115
       objectReference: {fileID: 0}
     - target: {fileID: 4351209550710614, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14959,10 +14940,6 @@ PrefabInstance:
       value: Cement_B (21)
       objectReference: {fileID: 0}
     - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
-      propertyPath: m_RootOrder
-      value: 196
-      objectReference: {fileID: 0}
-    - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.05493927
       objectReference: {fileID: 0}
@@ -16057,10 +16034,6 @@ PrefabInstance:
       value: Cement (8)
       objectReference: {fileID: 0}
     - target: {fileID: 4214389346116376, guid: 491d82b1acc78ba4d95af96a6fe1b5a8, type: 3}
-      propertyPath: m_RootOrder
-      value: 94
-      objectReference: {fileID: 0}
-    - target: {fileID: 4214389346116376, guid: 491d82b1acc78ba4d95af96a6fe1b5a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.2600021
       objectReference: {fileID: 0}
@@ -16239,10 +16212,6 @@ PrefabInstance:
       value: Wooden_Stand_B (15)
       objectReference: {fileID: 0}
     - target: {fileID: 4351209550710614, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
-      propertyPath: m_RootOrder
-      value: 115
-      objectReference: {fileID: 0}
-    - target: {fileID: 4351209550710614, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.245
       objectReference: {fileID: 0}
@@ -16388,10 +16357,6 @@ PrefabInstance:
     - target: {fileID: 1499310753839832, guid: 491d82b1acc78ba4d95af96a6fe1b5a8, type: 3}
       propertyPath: m_Name
       value: Cement (7)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4214389346116376, guid: 491d82b1acc78ba4d95af96a6fe1b5a8, type: 3}
-      propertyPath: m_RootOrder
-      value: 96
       objectReference: {fileID: 0}
     - target: {fileID: 4214389346116376, guid: 491d82b1acc78ba4d95af96a6fe1b5a8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19770,10 +19735,6 @@ PrefabInstance:
       value: Cement_B (22)
       objectReference: {fileID: 0}
     - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
-      propertyPath: m_RootOrder
-      value: 197
-      objectReference: {fileID: 0}
-    - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.03903961
       objectReference: {fileID: 0}
@@ -21045,10 +21006,6 @@ PrefabInstance:
       value: Cement_B (14)
       objectReference: {fileID: 0}
     - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
-      propertyPath: m_RootOrder
-      value: 189
-      objectReference: {fileID: 0}
-    - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.030921936
       objectReference: {fileID: 0}
@@ -21199,10 +21156,6 @@ PrefabInstance:
     - target: {fileID: 1375233789303162, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_Name
       value: Cement_B (18)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
-      propertyPath: m_RootOrder
-      value: 193
       objectReference: {fileID: 0}
     - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23340,10 +23293,6 @@ PrefabInstance:
       value: Cement_B (16)
       objectReference: {fileID: 0}
     - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
-      propertyPath: m_RootOrder
-      value: 191
-      objectReference: {fileID: 0}
-    - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.1790085
       objectReference: {fileID: 0}
@@ -23422,10 +23371,6 @@ PrefabInstance:
     - target: {fileID: 1375233789303162, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_Name
       value: Cement_B (13)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
-      propertyPath: m_RootOrder
-      value: 188
       objectReference: {fileID: 0}
     - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -25713,10 +25658,6 @@ PrefabInstance:
       value: Cement_B (27)
       objectReference: {fileID: 0}
     - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
-      propertyPath: m_RootOrder
-      value: 202
-      objectReference: {fileID: 0}
-    - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.180479
       objectReference: {fileID: 0}
@@ -25772,10 +25713,6 @@ PrefabInstance:
     - target: {fileID: 1375233789303162, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_Name
       value: Cement_B (35)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
-      propertyPath: m_RootOrder
-      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26202,10 +26139,6 @@ PrefabInstance:
     - target: {fileID: 1841898010600736, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
       propertyPath: m_Name
       value: Wooden_Stand_B (7)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4351209550710614, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
-      propertyPath: m_RootOrder
-      value: 115
       objectReference: {fileID: 0}
     - target: {fileID: 4351209550710614, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26902,10 +26835,6 @@ PrefabInstance:
       value: Garbage (3)
       objectReference: {fileID: 0}
     - target: {fileID: 4616418588631314, guid: 36185661c9efc3744a17898686b687bf, type: 3}
-      propertyPath: m_RootOrder
-      value: 119
-      objectReference: {fileID: 0}
-    - target: {fileID: 4616418588631314, guid: 36185661c9efc3744a17898686b687bf, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.90000004
       objectReference: {fileID: 0}
@@ -27353,10 +27282,6 @@ PrefabInstance:
     - target: {fileID: 1437173498364198, guid: a5088fa5fc917d543b851e8a130b1e29, type: 3}
       propertyPath: m_Name
       value: Pushcart (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4651728583195906, guid: a5088fa5fc917d543b851e8a130b1e29, type: 3}
-      propertyPath: m_RootOrder
-      value: 92
       objectReference: {fileID: 0}
     - target: {fileID: 4651728583195906, guid: a5088fa5fc917d543b851e8a130b1e29, type: 3}
       propertyPath: m_LocalPosition.x
@@ -28004,10 +27929,6 @@ PrefabInstance:
     - target: {fileID: 1841898010600736, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
       propertyPath: m_Name
       value: Wooden_Stand_B (8)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4351209550710614, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
-      propertyPath: m_RootOrder
-      value: 115
       objectReference: {fileID: 0}
     - target: {fileID: 4351209550710614, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
       propertyPath: m_LocalScale.x
@@ -30415,6 +30336,7 @@ GameObject:
   - component: {fileID: 6038442717858002233}
   - component: {fileID: 1204601809956253770}
   - component: {fileID: 928194647685418026}
+  - component: {fileID: 6038442717858002234}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -32735,10 +32657,6 @@ PrefabInstance:
       value: Cement_B (12)
       objectReference: {fileID: 0}
     - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
-      propertyPath: m_RootOrder
-      value: 187
-      objectReference: {fileID: 0}
-    - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.06793976
       objectReference: {fileID: 0}
@@ -34128,10 +34046,6 @@ PrefabInstance:
       value: Cement_B (23)
       objectReference: {fileID: 0}
     - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
-      propertyPath: m_RootOrder
-      value: 198
-      objectReference: {fileID: 0}
-    - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.018913269
       objectReference: {fileID: 0}
@@ -34308,10 +34222,6 @@ PrefabInstance:
     - target: {fileID: 1375233789303162, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_Name
       value: Cement_B (20)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
-      propertyPath: m_RootOrder
-      value: 195
       objectReference: {fileID: 0}
     - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -35382,10 +35292,6 @@ PrefabInstance:
       value: Cement_B (17)
       objectReference: {fileID: 0}
     - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
-      propertyPath: m_RootOrder
-      value: 192
-      objectReference: {fileID: 0}
-    - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.1870613
       objectReference: {fileID: 0}
@@ -35492,10 +35398,6 @@ PrefabInstance:
       value: Ladder (3)
       objectReference: {fileID: 0}
     - target: {fileID: 4934886711534568, guid: d52f06a66e549c64aa3d6b43d37b257b, type: 3}
-      propertyPath: m_RootOrder
-      value: 111
-      objectReference: {fileID: 0}
-    - target: {fileID: 4934886711534568, guid: d52f06a66e549c64aa3d6b43d37b257b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 23.240002
       objectReference: {fileID: 0}
@@ -35559,10 +35461,6 @@ PrefabInstance:
     - target: {fileID: 1841898010600736, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
       propertyPath: m_Name
       value: Wooden_Stand_B (11)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4351209550710614, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
-      propertyPath: m_RootOrder
-      value: 115
       objectReference: {fileID: 0}
     - target: {fileID: 4351209550710614, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -36071,10 +35969,6 @@ PrefabInstance:
       value: Cement_B (31)
       objectReference: {fileID: 0}
     - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
-      propertyPath: m_RootOrder
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.1949997
       objectReference: {fileID: 0}
@@ -36148,10 +36042,6 @@ PrefabInstance:
     - target: {fileID: 1841898010600736, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
       propertyPath: m_Name
       value: Wooden_Stand_B (8)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4351209550710614, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
-      propertyPath: m_RootOrder
-      value: 115
       objectReference: {fileID: 0}
     - target: {fileID: 4351209550710614, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
       propertyPath: m_LocalScale.x
@@ -36627,10 +36517,6 @@ PrefabInstance:
     - target: {fileID: 1375233789303162, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_Name
       value: Cement_B (34)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
-      propertyPath: m_RootOrder
-      value: 95
       objectReference: {fileID: 0}
     - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -37326,10 +37212,6 @@ PrefabInstance:
       value: Cement_B (19)
       objectReference: {fileID: 0}
     - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
-      propertyPath: m_RootOrder
-      value: 194
-      objectReference: {fileID: 0}
-    - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.2560616
       objectReference: {fileID: 0}
@@ -37412,6 +37294,18 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
+--- !u!114 &6038442717858002234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4699067046051660891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c9c78f8b4bfbf24daa540249caa8620, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &6039390642503045571 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4174875708765392, guid: 418ee091cafdbb245a2cf2b8286cc39a, type: 3}
@@ -40369,10 +40263,6 @@ PrefabInstance:
       value: Cement_B (28)
       objectReference: {fileID: 0}
     - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
-      propertyPath: m_RootOrder
-      value: 203
-      objectReference: {fileID: 0}
-    - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.1790085
       objectReference: {fileID: 0}
@@ -43237,10 +43127,6 @@ PrefabInstance:
       value: Wooden_Stand_B (12)
       objectReference: {fileID: 0}
     - target: {fileID: 4351209550710614, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
-      propertyPath: m_RootOrder
-      value: 115
-      objectReference: {fileID: 0}
-    - target: {fileID: 4351209550710614, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -44215,10 +44101,6 @@ PrefabInstance:
       value: Cement (6)
       objectReference: {fileID: 0}
     - target: {fileID: 4214389346116376, guid: 491d82b1acc78ba4d95af96a6fe1b5a8, type: 3}
-      propertyPath: m_RootOrder
-      value: 98
-      objectReference: {fileID: 0}
-    - target: {fileID: 4214389346116376, guid: 491d82b1acc78ba4d95af96a6fe1b5a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.3743134
       objectReference: {fileID: 0}
@@ -44534,10 +44416,6 @@ PrefabInstance:
       value: Cement_B (32)
       objectReference: {fileID: 0}
     - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
-      propertyPath: m_RootOrder
-      value: 99
-      objectReference: {fileID: 0}
-    - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.0890007
       objectReference: {fileID: 0}
@@ -44714,10 +44592,6 @@ PrefabInstance:
     - target: {fileID: 1375233789303162, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_Name
       value: Cement_B (29)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
-      propertyPath: m_RootOrder
-      value: 204
       objectReference: {fileID: 0}
     - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -45717,10 +45591,6 @@ PrefabInstance:
       value: Cement_B (15)
       objectReference: {fileID: 0}
     - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
-      propertyPath: m_RootOrder
-      value: 190
-      objectReference: {fileID: 0}
-    - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.180479
       objectReference: {fileID: 0}
@@ -46563,10 +46433,6 @@ PrefabInstance:
       value: Cement (9)
       objectReference: {fileID: 0}
     - target: {fileID: 4214389346116376, guid: 491d82b1acc78ba4d95af96a6fe1b5a8, type: 3}
-      propertyPath: m_RootOrder
-      value: 94
-      objectReference: {fileID: 0}
-    - target: {fileID: 4214389346116376, guid: 491d82b1acc78ba4d95af96a6fe1b5a8, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.3552451
       objectReference: {fileID: 0}
@@ -46621,7 +46487,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1499310753839832, guid: 491d82b1acc78ba4d95af96a6fe1b5a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8122551951049908987}
   m_SourcePrefab: {fileID: 100100000, guid: 491d82b1acc78ba4d95af96a6fe1b5a8, type: 3}
 --- !u!23 &7776506802098854406
 MeshRenderer:
@@ -48495,6 +48364,18 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4214389346116376, guid: 491d82b1acc78ba4d95af96a6fe1b5a8, type: 3}
   m_PrefabInstance: {fileID: 7770029747160808009}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8122551951049908987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 354733355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c9c78f8b4bfbf24daa540249caa8620, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8127450875382713611
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50568,10 +50449,6 @@ PrefabInstance:
       value: Cement_B (26)
       objectReference: {fileID: 0}
     - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
-      propertyPath: m_RootOrder
-      value: 201
-      objectReference: {fileID: 0}
-    - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.03099823
       objectReference: {fileID: 0}
@@ -52078,10 +51955,6 @@ PrefabInstance:
     - target: {fileID: 1375233789303162, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_Name
       value: Cement_B (25)
-      objectReference: {fileID: 0}
-    - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
-      propertyPath: m_RootOrder
-      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_LocalPosition.x
