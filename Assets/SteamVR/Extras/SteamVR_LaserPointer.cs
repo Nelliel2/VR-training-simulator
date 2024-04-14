@@ -27,6 +27,7 @@ namespace Valve.VR.Extras
         Transform previousContact = null;
 
 
+
         private void Start()
         {
             if (pose == null)
@@ -91,6 +92,8 @@ namespace Valve.VR.Extras
 
         private void Update()
         {
+            //SteamVR_
+       
             if (!isActive)
             {
                 isActive = true;
@@ -154,6 +157,7 @@ namespace Valve.VR.Extras
             }
             pointer.transform.localPosition = new Vector3(0f, 0f, dist / 2f);
         }
+            
     }
 
     public struct PointerEventArgs
