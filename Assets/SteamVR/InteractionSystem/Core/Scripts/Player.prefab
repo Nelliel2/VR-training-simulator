@@ -246,6 +246,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2975761847806100521}
   - {fileID: 494198}
   - {fileID: 402768}
   - {fileID: 471722}
@@ -496,7 +497,6 @@ Transform:
   m_Children:
   - {fileID: 476076}
   - {fileID: 476540}
-  - {fileID: 2975761847806100521}
   - {fileID: 485514}
   - {fileID: 429506}
   - {fileID: 4000011699137176}
@@ -1259,7 +1259,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 160596}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b2f511c1adaa1e94ebe7ca97bbcabd17, type: 3}
   m_Name: 
@@ -1272,8 +1272,8 @@ MonoBehaviour:
   color: {r: 0, g: 0, b: 0, a: 0}
   thickness: 0.002
   clickColor: {r: 0, g: 0, b: 0, a: 0}
-  holder: {fileID: 5320000243823233821}
-  pointer: {fileID: 5320000243823233821}
+  holder: {fileID: 0}
+  pointer: {fileID: 0}
   addRigidBody: 0
   reference: {fileID: 0}
 --- !u!1 &165334
@@ -1451,7 +1451,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &446772
 Transform:
   m_ObjectHideFlags: 0
@@ -1481,11 +1481,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controllerMaterial: {fileID: 2100000, guid: 11b050e661ec0cf48a289a7266451e91, type: 2}
   urpControllerMaterial: {fileID: 2100000, guid: 70a2eb634d7ed434b86d36f190fcf3a1, type: 2}
-  flashColor: {r: 1, g: 0.9170069, b: 0.453, a: 0.709}
+  flashColor: {r: 1, g: 0.91764706, b: 0.45490196, a: 0.709}
   textHintPrefab: {fileID: 140952, guid: 5fa42bb9e52706a42b8a1eaf0b54326a, type: 3}
   hapticFlash:
     actionPath: /actions/default/out/Haptic
-    needsReinit: 0
+    needsReinit: 1
   autoSetWithControllerRangeOfMotion: 1
   debugHints: 0
 --- !u!1 &177230
@@ -1504,7 +1504,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &413580
 Transform:
   m_ObjectHideFlags: 0
@@ -2875,11 +2875,15 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 494198}
+    m_TransformParent: {fileID: 447954}
     m_Modifications:
     - target: {fileID: 3580626450455114092, guid: 4ef5e0023bdbdf04bbe9ac4302e265b8, type: 3}
       propertyPath: m_Name
       value: Laser_LP
+      objectReference: {fileID: 0}
+    - target: {fileID: 3580626450455114092, guid: 4ef5e0023bdbdf04bbe9ac4302e265b8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5848072972258606680, guid: 4ef5e0023bdbdf04bbe9ac4302e265b8, type: 3}
       propertyPath: m_LocalScale.x
@@ -2895,15 +2899,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5848072972258606680, guid: 4ef5e0023bdbdf04bbe9ac4302e265b8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.19800001
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5848072972258606680, guid: 4ef5e0023bdbdf04bbe9ac4302e265b8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.9843
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5848072972258606680, guid: 4ef5e0023bdbdf04bbe9ac4302e265b8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.11630082
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5848072972258606680, guid: 4ef5e0023bdbdf04bbe9ac4302e265b8, type: 3}
       propertyPath: m_LocalRotation.w

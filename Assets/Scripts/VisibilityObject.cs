@@ -5,13 +5,19 @@ using UnityEngine;
 public class VisibilityObject : MonoBehaviour
 {
     // Start is called before the first frame update
-    private Renderer renderer;
-    private GameObject gameObject;
+    private Renderer rd;
+    private GameObject gameObj;
 
+    public void setVisibilityObject(Renderer r, GameObject obj) 
+    {
+        rd = r;
+        gameObj = obj;
+
+    }  
     public VisibilityObject(Renderer r, GameObject obj) 
     {
-        renderer = r;
-        gameObject = obj;
+        rd = r;
+        gameObj = obj;
 
     }
     void Start()
@@ -22,8 +28,8 @@ public class VisibilityObject : MonoBehaviour
 
     public void Hide()
     {
-        renderer.enabled = false;
-        Renderer[] lChildRenderers = gameObject.GetComponentsInChildren<Renderer>();
+        rd.enabled = false;
+        Renderer[] lChildRenderers = gameObj.GetComponentsInChildren<Renderer>();
         foreach (Renderer lRenderer in lChildRenderers)
         {
             lRenderer.enabled = false;
@@ -32,8 +38,8 @@ public class VisibilityObject : MonoBehaviour
 
     public void Show()
     {
-        renderer.enabled = true;
-        Renderer[] lChildRenderers = gameObject.GetComponentsInChildren<Renderer>();
+        rd.enabled = true;
+        Renderer[] lChildRenderers = gameObj.GetComponentsInChildren<Renderer>();
         foreach (Renderer lRenderer in lChildRenderers)
         {
             lRenderer.enabled = true;

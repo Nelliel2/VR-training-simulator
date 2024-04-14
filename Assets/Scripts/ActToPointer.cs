@@ -11,7 +11,7 @@ public class ActToPointer : MonoBehaviour
 {
     static SteamVR_LaserPointer laserPointer = null;
     SteamVR_Action_Boolean TurnOnLaserPointer;
-    
+    public static bool isCementFall = false;
 
     // Start is called before the first frame update
     void Start()
@@ -19,11 +19,16 @@ public class ActToPointer : MonoBehaviour
         // We need to find the laser pointer which we expect attached to our right hand:
         // NOTE: would be better to defend against missing SteamVR_LaserPointer component
         laserPointer = GameObject.Find("RightHand").GetComponent<SteamVR_LaserPointer>();
-        laserPointer.PointerIn += PointerInside;
-        laserPointer.PointerOut += PointerOutside;
-        laserPointer.PointerClick += PointerClick;
 
-        
+        if (laserPointer != null)
+        {
+            laserPointer.PointerIn += PointerInside;
+            laserPointer.PointerOut += PointerOutside;
+            laserPointer.PointerClick += PointerClick;
+        }
+
+
+
         // We need to find the speaking component. This should be attached to our GameObject
         // (because in this specific example use case, we are using the pointer click to
         // our character speaking)
@@ -49,28 +54,50 @@ public class ActToPointer : MonoBehaviour
         switch (e.target.name)
         {
             case "WoodPlanksBottom":
-                laserPointer.color = Color.yellow;
+                if (!FindObjectOfType<BuilderAnimations>().seenScenes[3])
+                {
+                    laserPointer.color = Color.yellow;
+                    laserPointer.clickColor = Color.green;
+                }
                 break;
             case "WoodPlanksTop":
-                laserPointer.color = Color.yellow;
+                if (!FindObjectOfType<BuilderAnimations>().seenScenes[3])
+                {
+                    laserPointer.color = Color.yellow;
+                    laserPointer.clickColor = Color.green;
+                }
                 break;
             case "WoodPlanksRopes":
-                laserPointer.color = Color.yellow;
-                break;            
+                if (!FindObjectOfType<BuilderAnimations>().seenScenes[3])
+                {
+                    laserPointer.color = Color.yellow;
+                    laserPointer.clickColor = Color.green;
+                }
+                break;
             case "WoodPlanksFabric":
-                laserPointer.color = Color.yellow;
+                if (!FindObjectOfType<BuilderAnimations>().seenScenes[3])
+                {
+                    laserPointer.color = Color.yellow;
+                    laserPointer.clickColor = Color.green;
+                }
                 break;
-            case "CementToFall":
-                laserPointer.color = Color.yellow;
+            case "CementTarget":
+                if (!FindObjectOfType<BuilderAnimations>().seenScenes[1])
+                {
+                    laserPointer.color = Color.yellow;
+                    laserPointer.clickColor = Color.green;
+                }
                 break;
-            case "WoodenCableDrumCables":
-                laserPointer.color = Color.yellow;
+            case "WoodenCableDrum":
+                if (!FindObjectOfType<BuilderAnimations>().seenScenes[2])
+                {
+                    laserPointer.color = Color.yellow;
+                    laserPointer.clickColor = Color.green;
+                }
                 break;            
-            case "WoodenCableDrumCollider":
-                laserPointer.color = Color.yellow;
-                break;
             case "Wooden_Stand":
                 laserPointer.color = Color.yellow;
+                laserPointer.clickColor = Color.red;
                 break;            
             case "BrickStack01":
                 laserPointer.color = Color.yellow;
@@ -110,7 +137,21 @@ public class ActToPointer : MonoBehaviour
                 break;            
             case "Mixer":
                 laserPointer.color = Color.yellow;
-                break;
+                break;     
+            case "Heap_mud (1)":
+                laserPointer.color = Color.yellow;
+                break;               
+            case "Heap_rubble (1)":
+                laserPointer.color = Color.yellow;
+                break;                   
+            case "BrickStack":
+                laserPointer.color = Color.yellow;
+                break;                
+            case "Toilet":
+                laserPointer.color = Color.yellow;
+                break;                           
+      
+
         }
     }
 
@@ -123,6 +164,7 @@ public class ActToPointer : MonoBehaviour
         {
             default:
                 laserPointer.color = Color.black;
+                laserPointer.clickColor = Color.red;
                 break;
 
         }
@@ -135,31 +177,41 @@ public class ActToPointer : MonoBehaviour
         switch (e.target.name)
         {
             case "WoodPlanksBottom":
-                laserPointer.color = Color.green;
+                if (!FindObjectOfType<BuilderAnimations>().seenScenes[3])
+                {
+                    FindObjectOfType<BuilderAnimations>().StartScene(3);
+                }
                 break;
             case "WoodPlanksTop":
-                laserPointer.color = Color.green;
+                if (!FindObjectOfType<BuilderAnimations>().seenScenes[3])
+                {
+                    FindObjectOfType<BuilderAnimations>().StartScene(3);
+                }
                 break;
             case "WoodPlanksRopes":
-                laserPointer.color = Color.green;
+                if (!FindObjectOfType<BuilderAnimations>().seenScenes[3])
+                {
+                    FindObjectOfType<BuilderAnimations>().StartScene(3);
+                }
                 break;
             case "WoodPlanksFabric":
-                laserPointer.color = Color.green;
+                if (!FindObjectOfType<BuilderAnimations>().seenScenes[3])
+                {
+                    FindObjectOfType<BuilderAnimations>().StartScene(3);
+                }
                 break;
-            case "CementToFall":
-                laserPointer.color = Color.green;
-                FindObjectOfType<BuilderAnimations>().StartScene(1);
-                break;
-            case "WoodenCableDrumCables":
-                laserPointer.color = Color.green;
-                FindObjectOfType<BuilderAnimations>().StartScene(2);
-                break;
-            case "WoodenCableDrumCollider":
-                laserPointer.color = Color.green;
-                FindObjectOfType<BuilderAnimations>().StartScene(2);
-                break;
-            default:
-                laserPointer.color = Color.red;
+            case "CementTarget":
+                if (!FindObjectOfType<BuilderAnimations>().seenScenes[1])
+                {
+                    isCementFall = true;
+                    FindObjectOfType<BuilderAnimations>().StartScene(1);
+                }
+                break;            
+            case "WoodenCableDrum":
+                if (!FindObjectOfType<BuilderAnimations>().seenScenes[2])
+                {
+                    FindObjectOfType<BuilderAnimations>().StartScene(2);
+                }
                 break;
 
         }
