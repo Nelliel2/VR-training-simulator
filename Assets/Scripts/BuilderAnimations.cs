@@ -8,7 +8,7 @@ public class BuilderAnimations : MonoBehaviour
     // Start is called before the first frame update
 
     private Rigidbody rb;
-    VisibilityObject obj;
+    VisibilityObject obj, cabel;
 
     public int scene = 0;
     public bool[] seenScenes = new bool[] {false, false, false, false};
@@ -30,7 +30,11 @@ public class BuilderAnimations : MonoBehaviour
         //obj = new VisibilityObject(GetComponent<Renderer>(), gameObject);
         obj.Hide();
 
-        //StartScene(1);
+        cabel = GameObject.FindGameObjectWithTag("WoodenCableDrum").AddComponent<VisibilityObject>();
+        cabel.setVisibilityObject(cabel.GetComponent<Renderer>(), cabel.gameObject);
+        
+        StartScene(3);
+        
     }
 
 
@@ -46,7 +50,12 @@ public class BuilderAnimations : MonoBehaviour
         FindObjectOfType<AnimationManager>().Stop("Builder", "Tripping");
 
         FindObjectOfType<AnimationManager>().PlayIdle("Builder");
-        
+        //if (seenScenes[2])
+        //{
+        //    cabel.Hide();
+        //}
+            
+
         if (!seenScenes[scene])
         { 
             switch (number)
@@ -100,6 +109,7 @@ public class BuilderAnimations : MonoBehaviour
                 FindObjectOfType<AnimationManager>().Play("CementToFall", "isPointed");
 
                 FindObjectOfType<AnimationManager>().Play("Builder", "Falling");
+                FindObjectOfType<AudioManager>().Play("fallingWithSound");
 
                 seenScenes[scene] = true;
                 scene = 0;
@@ -119,7 +129,7 @@ public class BuilderAnimations : MonoBehaviour
 
                 rb.freezeRotation = false;
                 FindObjectOfType<AnimationManager>().Play("Builder", "FallingUp");
-
+                FindObjectOfType<AudioManager>().Play("screamOfPain");
                 rb.useGravity = true;
                 seenScenes[scene] = true;
                 scene = 0;
@@ -136,8 +146,16 @@ public class BuilderAnimations : MonoBehaviour
                 FindObjectOfType<AnimationManager>().Play("Builder", "Tripping");
                 seenScenes[scene] = true;
                 scene = 0;
+                FindObjectOfType<AudioManager>().Play("fallingWithSound");
+                StartCoroutine(FallingOnSand());
 
             }
+        }
+
+        IEnumerator FallingOnSand()
+        {
+            yield return new WaitForSeconds(1.1f);
+            FindObjectOfType<AudioManager>().Play("fallingOnSand2");
         }
 
         IEnumerator DisableCementAnimator()
