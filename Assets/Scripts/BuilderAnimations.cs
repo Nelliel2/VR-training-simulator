@@ -7,8 +7,9 @@ public class BuilderAnimations : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    private Rigidbody rb;
-    VisibilityObject obj, cabel;
+    private Rigidbody rb, rbConcreteTubes;
+    private GameObject objBuilder2;
+    VisibilityObject obj, cabel, builder2;
 
     public int scene = 0;
     public bool[] seenScenes = new bool[] {false, false, false, false};
@@ -32,12 +33,23 @@ public class BuilderAnimations : MonoBehaviour
 
         cabel = GameObject.FindGameObjectWithTag("WoodenCableDrum").AddComponent<VisibilityObject>();
         cabel.setVisibilityObject(cabel.GetComponent<Renderer>(), cabel.gameObject);
-        
-        StartScene(3);
-        
+
+        objBuilder2 = GameObject.FindGameObjectWithTag("Builder2");
+
+        builder2 = GameObject.FindGameObjectWithTag("Builder2").AddComponent<VisibilityObject>();
+        builder2.setVisibilityObject(builder2.GetComponent<Renderer>(), builder2.gameObject);
+
+        rbConcreteTubes = GameObject.FindGameObjectWithTag("ConcreteTubes").GetComponent<Rigidbody>();
+
+        StartCoroutine(StartingScene(4));
+
     }
 
-
+    IEnumerator StartingScene(int num)
+    {
+        yield return new WaitForSeconds(5f);
+        StartScene(num);
+    }
 
     public void StartScene(int number)
     {
@@ -89,12 +101,25 @@ public class BuilderAnimations : MonoBehaviour
                     FindObjectOfType<AnimationManager>().Play("Builder", "Walking");
                     FindObjectOfType<AnimationManager>().ChangeUpdateModeUnscaledTime("Builder");
                     break;
+                case 4:
+                    rbConcreteTubes.useGravity = true;
+                    StartCoroutine(FailingConcreteTubes(number));
+                    return;
+                case 5:
+                    break;
             }        
             scene = number;
         
             obj.Show();
         }
     }
+
+    IEnumerator FailingConcreteTubes(int number)
+    {
+        yield return new WaitForSeconds(1.71f);
+        scene = number;
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -104,7 +129,7 @@ public class BuilderAnimations : MonoBehaviour
 
             if (transform.position == targetPosition1)
             {
-                
+
 
                 FindObjectOfType<AnimationManager>().Play("CementToFall", "isPointed");
 
@@ -114,7 +139,7 @@ public class BuilderAnimations : MonoBehaviour
                 seenScenes[scene] = true;
                 scene = 0;
                 StartCoroutine(DisableCementAnimator());
-                
+
 
                 //FindObjectOfType<AnimationManager>().disableAnimator("CementToFall");
             }
@@ -149,6 +174,19 @@ public class BuilderAnimations : MonoBehaviour
                 FindObjectOfType<AudioManager>().Play("fallingWithSound");
                 StartCoroutine(FallingOnSand());
 
+            }
+        }
+        else if ((scene == 4) && (!seenScenes[scene]))
+        {
+            objBuilder2.transform.localScale = new Vector3(objBuilder2.transform.localScale.x, objBuilder2.transform.localScale.y - 0.1f, objBuilder2.transform.localScale.z);
+            objBuilder2.transform.localPosition = new Vector3(objBuilder2.transform.localPosition.x, objBuilder2.transform.localPosition.y - 0.005f, objBuilder2.transform.localPosition.z);
+
+            if (objBuilder2.transform.localScale.y <= 0.1f)
+            {
+                seenScenes[scene] = true;
+                scene = 0;
+                
+                builder2.Hide();
             }
         }
 

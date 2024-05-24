@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - WoodenCableDrum
+  - Builder2
+  - ConcreteTubes
   layers:
   - Default
   - TransparentFX

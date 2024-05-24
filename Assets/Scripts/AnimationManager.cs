@@ -90,7 +90,7 @@ public class AnimationManager : MonoBehaviour
 
         if (a == null)
         {
-            Debug.LogWarning("Animator " + name + " not found");
+            Debug.LogWarning("Animator " + animator + " not found" + name);
             return;
         }
 
@@ -118,7 +118,7 @@ public class AnimationManager : MonoBehaviour
 
         if (a == null)
         {
-            Debug.LogWarning("Animator " + name + " not found");
+            Debug.LogWarning("Animator " + animator + " not found" + name);
             return;
         }
 

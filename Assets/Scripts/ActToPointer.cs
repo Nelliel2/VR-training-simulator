@@ -10,6 +10,7 @@ using Valve.VR.Extras;
 public class ActToPointer : MonoBehaviour
 {
     static SteamVR_LaserPointer laserPointer = null;
+    static GameObject gameObject;
     SteamVR_Action_Boolean TurnOnLaserPointer;
     public static bool isCementFall = false;
 
@@ -18,14 +19,21 @@ public class ActToPointer : MonoBehaviour
     {
         // We need to find the laser pointer which we expect attached to our right hand:
         // NOTE: would be better to defend against missing SteamVR_LaserPointer component
-        laserPointer = GameObject.Find("RightHand").GetComponent<SteamVR_LaserPointer>();
+        gameObject = GameObject.Find("RightHand");
 
-        if (laserPointer != null)
+        if (gameObject != null)
         {
-            laserPointer.PointerIn += PointerInside;
-            laserPointer.PointerOut += PointerOutside;
-            laserPointer.PointerClick += PointerClick;
+            laserPointer = GameObject.Find("RightHand").GetComponent<SteamVR_LaserPointer>();
+
+            if (laserPointer != null)
+            {
+                laserPointer.PointerIn += PointerInside;
+                laserPointer.PointerOut += PointerOutside;
+                laserPointer.PointerClick += PointerClick;
+            }
         }
+
+
 
 
 
@@ -172,8 +180,10 @@ public class ActToPointer : MonoBehaviour
 
     public static void PointerClick(object sender, PointerEventArgs e)
     {
-        Debug.Log("PointerClick: " + e.target.name);
+        Debug.Log("PointerClick: " + e.target.name + e.target.tag);
         
+
+
         switch (e.target.name)
         {
             case "WoodPlanksBottom":
