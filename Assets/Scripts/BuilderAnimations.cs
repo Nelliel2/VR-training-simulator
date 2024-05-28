@@ -9,7 +9,12 @@ public class BuilderAnimations : MonoBehaviour
 
     private Rigidbody rb, rbConcreteTubes;
     private GameObject objBuilder2;
-    VisibilityObject obj, cabel, builder2;
+    private VisibilityObject obj, cabel, builder2;
+    private OnCollision builder2Collision;
+
+    static private AnimationManager animationManager;
+    static private AudioManager audioManager;
+
 
     public int scene = 0;
     public bool[] seenScenes = new bool[] {false, false, false, false};
@@ -23,6 +28,10 @@ public class BuilderAnimations : MonoBehaviour
 
     void Start()
     {
+
+        animationManager = FindObjectOfType<AnimationManager>();
+        audioManager = FindObjectOfType<AudioManager>();
+
         rb = GetComponent<Rigidbody>();
 
 
@@ -35,13 +44,18 @@ public class BuilderAnimations : MonoBehaviour
         cabel.setVisibilityObject(cabel.GetComponent<Renderer>(), cabel.gameObject);
 
         objBuilder2 = GameObject.FindGameObjectWithTag("Builder2");
+        
 
         builder2 = GameObject.FindGameObjectWithTag("Builder2").AddComponent<VisibilityObject>();
         builder2.setVisibilityObject(builder2.GetComponent<Renderer>(), builder2.gameObject);
+        builder2Collision = objBuilder2.transform.Find("mixamorig1:Hips").GetComponent<OnCollision>();
 
         rbConcreteTubes = GameObject.FindGameObjectWithTag("ConcreteTubes").GetComponent<Rigidbody>();
 
+        
         StartCoroutine(StartingScene(4));
+
+
 
     }
 
@@ -55,13 +69,15 @@ public class BuilderAnimations : MonoBehaviour
     {
         obj.Hide();
 
-        FindObjectOfType<AnimationManager>().Stop("Builder", "Walking");
-        FindObjectOfType<AnimationManager>().Stop("Builder", "ClimbingLadder");
-        FindObjectOfType<AnimationManager>().Stop("Builder", "Falling");        
-        FindObjectOfType<AnimationManager>().Stop("Builder", "FallingUp");
-        FindObjectOfType<AnimationManager>().Stop("Builder", "Tripping");
+        animationManager.Stop("Builder", "Walking");
+        animationManager.Stop("Builder", "ClimbingLadder");
+        animationManager.Stop("Builder", "Falling");        
+        animationManager.Stop("Builder", "FallingUp");
+        animationManager.Stop("Builder", "Tripping");
 
-        FindObjectOfType<AnimationManager>().PlayIdle("Builder");
+        animationManager.PlayIdle("Builder");
+        
+        //animationManager.PlayIdle("Builder2");
         //if (seenScenes[2])
         //{
         //    cabel.Hide();
@@ -78,8 +94,8 @@ public class BuilderAnimations : MonoBehaviour
                     rb.position = new Vector3(-19, 0.1f, 2.9f);
                     rb.useGravity = true;
                     movementSpeed = 2f;
-                    FindObjectOfType<AnimationManager>().Play("Builder", "Walking");
-                    FindObjectOfType<AnimationManager>().ChangeUpdateModeAnimatePhysics("Builder");
+                    animationManager.Play("Builder", "Walking");
+                    animationManager.ChangeUpdateModeAnimatePhysics("Builder");
                     break;
 
                 case 2:
@@ -88,8 +104,8 @@ public class BuilderAnimations : MonoBehaviour
                     rb.position = new Vector3(-30, 5f, 4.3f);
                     rb.useGravity = false;
                     movementSpeed = 0.5f;
-                    FindObjectOfType<AnimationManager>().Play("Builder", "ClimbingLadder");
-                    FindObjectOfType<AnimationManager>().ChangeUpdateModeUnscaledTime("Builder");
+                    animationManager.Play("Builder", "ClimbingLadder");
+                    animationManager.ChangeUpdateModeUnscaledTime("Builder");
                     break;
 
                 case 3:
@@ -98,12 +114,15 @@ public class BuilderAnimations : MonoBehaviour
                     rb.position = new Vector3(-30.5f, 0.1f, 0);
                     rb.useGravity = true;
                     movementSpeed = 2f;
-                    FindObjectOfType<AnimationManager>().Play("Builder", "Walking");
-                    FindObjectOfType<AnimationManager>().ChangeUpdateModeUnscaledTime("Builder");
+                    animationManager.Play("Builder", "Walking");
+                    animationManager.ChangeUpdateModeUnscaledTime("Builder");
                     break;
                 case 4:
+                    audioManager.Play("breakingRope");
+                    animationManager.Play("Rope", "Falling");
                     rbConcreteTubes.useGravity = true;
-                    StartCoroutine(FailingConcreteTubes(number));
+                    scene = number;
+                    //StartCoroutine(FailingConcreteTubes(number));
                     return;
                 case 5:
                     break;
@@ -117,6 +136,7 @@ public class BuilderAnimations : MonoBehaviour
     IEnumerator FailingConcreteTubes(int number)
     {
         yield return new WaitForSeconds(1.71f);
+        
         scene = number;
     }
 
@@ -131,17 +151,17 @@ public class BuilderAnimations : MonoBehaviour
             {
 
 
-                FindObjectOfType<AnimationManager>().Play("CementToFall", "isPointed");
+                animationManager.Play("CementToFall", "isPointed");
 
-                FindObjectOfType<AnimationManager>().Play("Builder", "Falling");
-                FindObjectOfType<AudioManager>().Play("fallingWithSound");
+                animationManager.Play("Builder", "Falling");
+                audioManager.Play("fallingWithSound");
 
                 seenScenes[scene] = true;
                 scene = 0;
                 StartCoroutine(DisableCementAnimator());
 
 
-                //FindObjectOfType<AnimationManager>().disableAnimator("CementToFall");
+                //animationManager.disableAnimator("CementToFall");
             }
 
         }
@@ -153,8 +173,8 @@ public class BuilderAnimations : MonoBehaviour
             {
 
                 rb.freezeRotation = false;
-                FindObjectOfType<AnimationManager>().Play("Builder", "FallingUp");
-                FindObjectOfType<AudioManager>().Play("screamOfPain");
+                animationManager.Play("Builder", "FallingUp");
+                audioManager.Play("screamOfPain");
                 rb.useGravity = true;
                 seenScenes[scene] = true;
                 scene = 0;
@@ -168,38 +188,50 @@ public class BuilderAnimations : MonoBehaviour
             if (transform.position == targetPosition3)
             {
 
-                FindObjectOfType<AnimationManager>().Play("Builder", "Tripping");
+                animationManager.Play("Builder", "Tripping");
                 seenScenes[scene] = true;
                 scene = 0;
-                FindObjectOfType<AudioManager>().Play("fallingWithSound");
+                audioManager.Play("fallingWithSound");
                 StartCoroutine(FallingOnSand());
 
             }
         }
         else if ((scene == 4) && (!seenScenes[scene]))
         {
-            objBuilder2.transform.localScale = new Vector3(objBuilder2.transform.localScale.x, objBuilder2.transform.localScale.y - 0.1f, objBuilder2.transform.localScale.z);
-            objBuilder2.transform.localPosition = new Vector3(objBuilder2.transform.localPosition.x, objBuilder2.transform.localPosition.y - 0.005f, objBuilder2.transform.localPosition.z);
 
-            if (objBuilder2.transform.localScale.y <= 0.1f)
+            if (builder2Collision.isCollisioning)
             {
+                //Debug.LogError(objBuilder2.transform.Find("Colliders").GetComponent<OnCollision>().isCollisioning);
+
+                //objBuilder2.transform.localScale = new Vector3(objBuilder2.transform.localScale.x, objBuilder2.transform.localScale.y - 0.1f, objBuilder2.transform.localScale.z);
+
+
+                audioManager.Play("fallingHeavyObject");
+                animationManager.Play("Builder2", "Falling");
+                audioManager.Play("screamOfPain2");
+                objBuilder2.transform.localPosition = new Vector3(objBuilder2.transform.localPosition.x, objBuilder2.transform.localPosition.y - 0.1f, objBuilder2.transform.localPosition.z);
                 seenScenes[scene] = true;
                 scene = 0;
-                
-                builder2.Hide();
+
+                if (objBuilder2.transform.localPosition.y <= -1.75f)
+                {
+
+
+                    //builder2.Hide();
+                }
             }
         }
 
         IEnumerator FallingOnSand()
         {
             yield return new WaitForSeconds(1.1f);
-            FindObjectOfType<AudioManager>().Play("fallingOnSand2");
+            audioManager.Play("fallingOnSand2");
         }
 
         IEnumerator DisableCementAnimator()
         {
             yield return new WaitForSeconds(0.6f);
-            FindObjectOfType<AnimationManager>().DisableAnimator("CementToFall");
+            animationManager.DisableAnimator("CementToFall");
         }
     }
 

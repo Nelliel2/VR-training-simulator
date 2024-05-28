@@ -1,0 +1,550 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Maui.Controls.Maps</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Maui.Controls.Hosting.AppHostBuilderExtensions">
+            <summary>
+            This class contains the Map's <see cref="T:Microsoft.Maui.Hosting.MauiAppBuilder"/> extensions.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.Hosting.AppHostBuilderExtensions.UseMauiMaps(Microsoft.Maui.Hosting.MauiAppBuilder)">
+            <summary>
+            Configures <see cref="T:Microsoft.Maui.Hosting.MauiAppBuilder"/> to add support for the <see cref="T:Microsoft.Maui.Controls.Maps.Map"/> control.
+            </summary>
+            <param name="builder">The <see cref="T:Microsoft.Maui.Hosting.MauiAppBuilder"/> to configure.</param>
+            <returns>The configured <see cref="T:Microsoft.Maui.Hosting.MauiAppBuilder"/>.</returns>
+            <exception cref="T:System.NotImplementedException">Thrown on Windows because the maps control currently is not implemented for Windows.</exception>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.Hosting.AppHostBuilderExtensions.AddMauiMaps(Microsoft.Maui.Hosting.IMauiHandlersCollection)">
+            <summary>
+            Registers the .NET MAUI Maps handlers that are needed to render the map control.
+            </summary>
+            <param name="handlersCollection">An instance of <see cref="T:Microsoft.Maui.Hosting.IMauiHandlersCollection"/> on which to register the map handlers.</param>
+            <returns>The provided <see cref="T:Microsoft.Maui.Hosting.IMauiHandlersCollection"/> object with the registered map handlers for subsequent registration calls.</returns>
+            <exception cref="T:System.NotImplementedException">Thrown on Windows because the maps control currently is not implemented for Windows.</exception>
+        </member>
+        <member name="T:Microsoft.Maui.Controls.Maps.Circle">
+            <summary>
+            Represents a circle drawn on the map control.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Maui.Controls.Maps.Circle.CenterProperty">
+            <summary>Bindable property for <see cref="P:Microsoft.Maui.Controls.Maps.Circle.Center"/>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Controls.Maps.Circle.RadiusProperty">
+            <summary>Bindable property for <see cref="P:Microsoft.Maui.Controls.Maps.Circle.Radius"/>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Controls.Maps.Circle.FillColorProperty">
+            <summary>Bindable property for <see cref="P:Microsoft.Maui.Controls.Maps.Circle.FillColor"/>.</summary>
+        </member>
+        <member name="P:Microsoft.Maui.Controls.Maps.Circle.Center">
+            <summary>
+            Gets or sets the center location. This is a bindable property.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Maui.Controls.Maps.Circle.Radius">
+            <summary>
+            Gets or sets the radius. This is a bindable property.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Maui.Controls.Maps.Circle.FillColor">
+            <summary>
+            Gets or sets the fill color. This is a bindable property.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Maui.Controls.Maps.Circle.Fill">
+            <inheritdoc cref="P:Microsoft.Maui.Maps.IFilledMapElement.Fill"/>
+        </member>
+        <member name="T:Microsoft.Maui.Controls.Maps.Map">
+            <summary>
+            The Map control is a cross-platform view for displaying and annotating maps.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.Maps.Map.OnHandlerChanged">
+            <summary>
+            Raised when the handler for this map control changed.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Maui.Controls.Maps.Map.MapTypeProperty">
+            <summary>Bindable property for <see cref="P:Microsoft.Maui.Controls.Maps.Map.MapType"/>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Controls.Maps.Map.IsShowingUserProperty">
+            <summary>Bindable property for <see cref="P:Microsoft.Maui.Controls.Maps.Map.IsShowingUser"/>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Controls.Maps.Map.IsTrafficEnabledProperty">
+            <summary>Bindable property for <see cref="P:Microsoft.Maui.Controls.Maps.Map.IsTrafficEnabled"/>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Controls.Maps.Map.IsScrollEnabledProperty">
+            <summary>Bindable property for <see cref="P:Microsoft.Maui.Controls.Maps.Map.IsScrollEnabled"/>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Controls.Maps.Map.IsZoomEnabledProperty">
+            <summary>Bindable property for <see cref="P:Microsoft.Maui.Controls.Maps.Map.IsZoomEnabled"/>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Controls.Maps.Map.ItemsSourceProperty">
+            <summary>Bindable property for <see cref="P:Microsoft.Maui.Controls.Maps.Map.ItemsSource"/>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Controls.Maps.Map.ItemTemplateProperty">
+            <summary>Bindable property for <see cref="P:Microsoft.Maui.Controls.Maps.Map.ItemTemplate"/>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Controls.Maps.Map.ItemTemplateSelectorProperty">
+            <summary>Bindable property for <see cref="P:Microsoft.Maui.Controls.Maps.Map.ItemTemplateSelector"/>.</summary>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.Maps.Map.#ctor(Microsoft.Maui.Maps.MapSpan)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Maui.Controls.Maps.Map"/> class with a region.
+            </summary>
+            <param name="region">The region that should be initially shown by the map.</param>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.Maps.Map.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Maui.Controls.Maps.Map"/> class with a region.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Maui.Controls.Maps.Map.IsScrollEnabled">
+            <summary>
+            Gets or sets a value that indicates if scrolling by user input is enabled. Default value is <see langword="true"/>.
+            This is a bindable property.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Maui.Controls.Maps.Map.IsZoomEnabled">
+            <summary>
+            Gets or sets a value that indicates if zooming by user input is enabled. Default value is <see langword="true"/>.
+            This is a bindable property.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Maui.Controls.Maps.Map.IsShowingUser">
+            <summary>
+            Gets or sets a value that indicates if the map shows an indicator of the current position of this device. Default value is <see langword="false"/>
+            This is a bindable property.
+            </summary>
+            <remarks>Depending on the platform it is likely that runtime permission(s) need to be requested to determine the current location of the device.</remarks>
+        </member>
+        <member name="P:Microsoft.Maui.Controls.Maps.Map.IsTrafficEnabled">
+            <summary>
+            Gets or sets a value that indicates if the map shows current traffic information. Default value is <see langword="false"/>.
+            This is a bindable property.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Maui.Controls.Maps.Map.MapType">
+            <summary>
+            Gets or sets the style of the map. Default value is <see cref="F:Microsoft.Maui.Maps.MapType.Street"/>. 
+            This is a bindable property.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Maui.Controls.Maps.Map.Pins">
+            <summary>
+            Gets the pins currently added to this map.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Maui.Controls.Maps.Map.ItemsSource">
+            <summary>
+            Gets or sets the object that represents the collection of pins that should be shown on the map.
+            This is a bindable property.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Maui.Controls.Maps.Map.ItemTemplate">
+            <summary>
+            Gets or sets the template that is to be applied to each object in <see cref="P:Microsoft.Maui.Controls.Maps.Map.ItemsSource"/>.
+            This is a bindable property.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Maui.Controls.Maps.Map.ItemTemplateSelector">
+            <summary>
+            Gets or sets the object that selects the template that is to be applied to each object in <see cref="P:Microsoft.Maui.Controls.Maps.Map.ItemsSource"/>.
+            This is a bindable property.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Maui.Controls.Maps.Map.MapElements">
+            <summary>
+            Gets the elements (pins, polygons, polylines, etc.) currently added to this map.
+            </summary>
+        </member>
+        <member name="E:Microsoft.Maui.Controls.Maps.Map.MapClicked">
+            <summary>
+            Occurs when the user clicks/taps on the map control.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Maui.Controls.Maps.Map.VisibleRegion">
+            <summary>
+            Gets the currently visible region of the map.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.Maps.Map.GetEnumerator">
+            <summary>
+            Returns an enumarator of all the pins that are currently added to the map.
+            </summary>
+            <returns>An instance of <see cref="T:System.Collections.Generic.IEnumerator`1"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.Maps.Map.MoveToRegion(Microsoft.Maui.Maps.MapSpan)">
+            <summary>
+            Adjusts the viewport of the map control to view the specified region.
+            </summary>
+            <param name="mapSpan">A <see cref="T:Microsoft.Maui.Maps.MapSpan"/> object containing details on what region should be shown.</param>
+            <exception cref="T:System.ArgumentNullException">Thrown when <paramref name="mapSpan"/> is <see langword="null"/>.</exception>
+        </member>
+        <member name="T:Microsoft.Maui.Controls.Maps.MapElement">
+            <summary>
+            Represents an element which is visually drawn on the <see cref="T:Microsoft.Maui.Controls.Maps.Map"/> control.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Maui.Controls.Maps.MapElement.StrokeColorProperty">
+            <summary>Bindable property for <see cref="P:Microsoft.Maui.Controls.Maps.MapElement.StrokeColor"/>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Controls.Maps.MapElement.StrokeWidthProperty">
+            <summary>Bindable property for <see cref="P:Microsoft.Maui.Controls.Maps.MapElement.StrokeWidth"/>.</summary>
+        </member>
+        <member name="P:Microsoft.Maui.Controls.Maps.MapElement.StrokeColor">
+            <summary>
+            Gets or sets the stroke color. This is a bindable property.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Maui.Controls.Maps.MapElement.StrokeWidth">
+            <summary>
+            Gets or sets the stroke width. The default value is <c>5f</c>.
+            This is a bindable property.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Maui.Controls.Maps.MapElement.MapElementId">
+            <summary>
+            Gets or sets the platform counterpart of this map element.
+            </summary>
+            <remarks>This should typically not be set by the developer. Doing so might result in unpredictable behavior.</remarks>
+        </member>
+        <member name="T:Microsoft.Maui.Controls.Maps.Pin">
+            <summary>
+            Represents a pin on the <see cref="T:Microsoft.Maui.Controls.Maps.Map"/> control.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Maui.Controls.Maps.Pin.TypeProperty">
+            <summary>Bindable property for <see cref="P:Microsoft.Maui.Controls.Maps.Pin.Type"/>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Controls.Maps.Pin.LocationProperty">
+            <summary>Bindable property for <see cref="P:Microsoft.Maui.Controls.Maps.Pin.Location"/>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Controls.Maps.Pin.AddressProperty">
+            <summary>Bindable property for <see cref="P:Microsoft.Maui.Controls.Maps.Pin.Address"/>.</summary>
+        </member>
+        <member name="F:Microsoft.Maui.Controls.Maps.Pin.LabelProperty">
+            <summary>Bindable property for <see cref="P:Microsoft.Maui.Controls.Maps.Pin.Label"/>.</summary>
+        </member>
+        <member name="P:Microsoft.Maui.Controls.Maps.Pin.Address">
+            <inheritdoc />
+        </member>
+        <member name="P:Microsoft.Maui.Controls.Maps.Pin.Label">
+            <inheritdoc />
+        </member>
+        <member name="P:Microsoft.Maui.Controls.Maps.Pin.Location">
+            <inheritdoc />
+        </member>
+        <member name="P:Microsoft.Maui.Controls.Maps.Pin.Type">
+            <summary>
+            Gets or sets the kind of pin. The default value is <see cref="F:Microsoft.Maui.Controls.Maps.PinType.Generic"/>.
+            This is a bindable property.
+            </summary>
+            <remarks>Depending on the platform, and versions of the platform, this might change the visual representation. This varies between the different platforms.</remarks>
+        </member>
+        <member name="P:Microsoft.Maui.Controls.Maps.Pin.MarkerId">
+            <summary>
+            Gets or sets the platform counterpart of this pin element.
+            </summary>
+            <remarks>This should typically not be set by the developer. Doing so might result in unpredictable behavior.</remarks>
+        </member>
+        <member name="E:Microsoft.Maui.Controls.Maps.Pin.MarkerClicked">
+            <summary>
+            Raised when this marker is clicked.
+            </summary>
+        </member>
+        <member name="E:Microsoft.Maui.Controls.Maps.Pin.InfoWindowClicked">
+            <summary>
+            Raised when the info window for this marker is clicked.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.Maps.Pin.Equals(System.Object)">
+            <inheritdoc cref="M:System.Object.Equals(System.Object)"/>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.Maps.Pin.GetHashCode">
+            <inheritdoc cref="M:System.Object.GetHashCode"/>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.Maps.Pin.op_Equality(Microsoft.Maui.Controls.Maps.Pin,Microsoft.Maui.Controls.Maps.Pin)">
+            <summary>
+            Equality operator for equals.
+            </summary>
+            <param name="left">Left to compare.</param>
+            <param name="right">Right to compare.</param>
+            <returns><see langword="true"/> if objects are equal, otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.Maps.Pin.op_Inequality(Microsoft.Maui.Controls.Maps.Pin,Microsoft.Maui.Controls.Maps.Pin)">
+            <summary>
+            Inequality operator.
+            </summary>
+            <param name="left">Left to compare.</param>
+            <param name="right">Right to compare.</param>
+            <returns><see langword="true"/> if objects are not equal, otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.Maps.Pin.SendMarkerClick">
+            <summary>
+            Triggers the click/tap event for a pin.
+            </summary>
+            <returns><see langword="true"/> if the info window associated to this pin will hide after this event has occurred, otherwise <see langword="false"/></returns>
+            <remarks>For internal use only. This API can be changed or removed without notice at any time.</remarks>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.Maps.Pin.SendInfoWindowClick">
+            <summary>
+            Triggers the click/tap event for a info window of a pin.
+            </summary>
+            <returns><see langword="true"/> if the info window associated to this pin will hide after this event has occurred, otherwise <see langword="false"/></returns>
+            <remarks>For internal use only. This API can be changed or removed without notice at any time.</remarks>
+        </member>
+        <member name="T:Microsoft.Maui.Controls.Maps.Polygon">
+            <summary>
+            Represents a polygon drawn on the map control.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Maui.Controls.Maps.Polygon.Fill">
+            <inheritdoc cref="P:Microsoft.Maui.Maps.IFilledMapElement.Fill"/>
+        </member>
+        <member name="P:Microsoft.Maui.Controls.Maps.Polygon.Item(System.Int32)">
+            <summary>
+            Gets or sets the location object at the specified index.
+            </summary>
+            <param name="index">The index of the location object to return or set.</param>
+            <returns>The location object at the specified index.</returns>
+        </member>
+        <member name="P:Microsoft.Maui.Controls.Maps.Polygon.Count">
+            <summary>
+            Gets the location object count in this polygon.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Maui.Controls.Maps.Polygon.IsReadOnly">
+            <summary>
+            Gets whether this polygon is read-only.
+            </summary>
+            <remarks>Always returns <see langword="false"/>.</remarks>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.Maps.Polygon.Add(Microsoft.Maui.Devices.Sensors.Location)">
+            <summary>
+            Adds a location to this polygon.
+            </summary>
+            <param name="item">The location to add.</param>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.Maps.Polygon.Clear">
+            <summary>
+            Clears all locations that make up this polygon.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.Maps.Polygon.Contains(Microsoft.Maui.Devices.Sensors.Location)">
+            <summary>
+            Returns whether the specified location is contained in this polygon.
+            </summary>
+            <param name="item">The location object of which to determine if it is contained in the location collection of this polygon.</param>
+            <returns><see langword="true"/> if <paramref name="item"/> is contained in the location collection of this polygon, otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.Maps.Polygon.CopyTo(Microsoft.Maui.Devices.Sensors.Location[],System.Int32)">
+            <summary>
+            Copies the child locations to the specified array.
+            </summary>
+            <param name="array">The target array to copy the child views to.</param>
+            <param name="arrayIndex">The index at which the copying needs to start.</param>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.Maps.Polygon.GetEnumerator">
+            <summary>
+            Returns an enumerator that lists all of the location object in this polygon.
+            </summary>
+            <returns>A <see cref="T:System.Collections.Generic.IEnumerator`1"/> of type <see cref="T:Microsoft.Maui.Devices.Sensors.Location"/> with all the locations in this polygon.</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.Maps.Polygon.IndexOf(Microsoft.Maui.Devices.Sensors.Location)">
+            <summary>
+            Gets the index of a specified location object.
+            </summary>
+            <param name="item">The location object of which to determine the index.</param>
+            <returns>The index of the specified location, if the location was not found this will return <c>-1</c>.</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.Maps.Polygon.Insert(System.Int32,Microsoft.Maui.Devices.Sensors.Location)">
+            <summary>
+            Inserts a location object at the specified index.
+            </summary>
+            <param name="index">The index at which to specify the location object.</param>
+            <param name="item">The location object to insert.</param>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.Maps.Polygon.Remove(Microsoft.Maui.Devices.Sensors.Location)">
+            <summary>
+            Removes a location object from this polygon.
+            </summary>
+            <param name="item">The location object to remove.</param>
+            <returns><see langword="true"/> if the location was removed successfully, otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.Maps.Polygon.RemoveAt(System.Int32)">
+            <summary>
+            Removes a location object at the specified index.
+            </summary>
+            <param name="index">The index at which to remove the location.</param>
+        </member>
+        <member name="F:Microsoft.Maui.Controls.Maps.Polygon.FillColorProperty">
+            <summary>Bindable property for <see cref="P:Microsoft.Maui.Controls.Maps.Polygon.FillColor"/>.</summary>
+        </member>
+        <member name="P:Microsoft.Maui.Controls.Maps.Polygon.FillColor">
+            <summary>
+            Gets or sets the fill color. This is a bindable property.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Maui.Controls.Maps.Polygon.Geopath">
+            <summary>
+            Gets a list of locations on the map which forms the outline of this polygon on the map.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.Maps.Polygon.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Maui.Controls.Maps.Polygon"/> class.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Maui.Controls.Maps.Polyline">
+            <summary>
+            Represents a polyline drawn on the map control.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Maui.Controls.Maps.Polyline.Item(System.Int32)">
+            <summary>
+            Gets or sets the location object at the specified index.
+            </summary>
+            <param name="index">The index of the location object to return or set.</param>
+            <returns>The location object at the specified index.</returns>
+        </member>
+        <member name="P:Microsoft.Maui.Controls.Maps.Polyline.Count">
+            <summary>
+            Gets the location object count in this polyline.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Maui.Controls.Maps.Polyline.IsReadOnly">
+            <summary>
+            Gets whether this polyline is read-only.
+            </summary>
+            <remarks>Always returns <see langword="false"/>.</remarks>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.Maps.Polyline.Add(Microsoft.Maui.Devices.Sensors.Location)">
+            <summary>
+            Adds a location to this polyline.
+            </summary>
+            <param name="item">The location to add.</param>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.Maps.Polyline.Clear">
+            <summary>
+            Clears all locations that make up this polyline.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.Maps.Polyline.Contains(Microsoft.Maui.Devices.Sensors.Location)">
+            <summary>
+            Returns whether the specified location is contained in this polyline.
+            </summary>
+            <param name="item">The location object of which to determine if it is contained in the location collection of this polyline.</param>
+            <returns><see langword="true"/> if <paramref name="item"/> is contained in the location collection of this polyline, otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.Maps.Polyline.CopyTo(Microsoft.Maui.Devices.Sensors.Location[],System.Int32)">
+            <summary>
+            Copies the child locations to the specified array.
+            </summary>
+            <param name="array">The target array to copy the child views to.</param>
+            <param name="arrayIndex">The index at which the copying needs to start.</param>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.Maps.Polyline.GetEnumerator">
+            <summary>
+            Returns an enumerator that lists all of the location object in this polyline.
+            </summary>
+            <returns>A <see cref="T:System.Collections.Generic.IEnumerator`1"/> of type <see cref="T:Microsoft.Maui.Devices.Sensors.Location"/> with all the locations in this polyline.</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.Maps.Polyline.IndexOf(Microsoft.Maui.Devices.Sensors.Location)">
+            <summary>
+            Gets the index of a specified location object.
+            </summary>
+            <param name="item">The location object of which to determine the index.</param>
+            <returns>The index of the specified location, if the location was not found this will return <c>-1</c>.</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.Maps.Polyline.Insert(System.Int32,Microsoft.Maui.Devices.Sensors.Location)">
+            <summary>
+            Inserts a location object at the specified index.
+            </summary>
+            <param name="index">The index at which to specify the location object.</param>
+            <param name="item">The location object to insert.</param>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.Maps.Polyline.Remove(Microsoft.Maui.Devices.Sensors.Location)">
+            <summary>
+            Removes a location object from this polyline.
+            </summary>
+            <param name="item">The location object to remove.</param>
+            <returns><see langword="true"/> if the location was removed successfully, otherwise <see langword="false"/>.</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.Maps.Polyline.RemoveAt(System.Int32)">
+            <summary>
+            Removes a location object at the specified index.
+            </summary>
+            <param name="index">The index at which to remove the location.</param>
+        </member>
+        <member name="P:Microsoft.Maui.Controls.Maps.Polyline.Geopath">
+            <summary>
+            Gets a list of locations on the map which forms the polyline on the map.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.Maps.Polyline.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Maui.Controls.Maps.Polyline"/> class.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Maui.Controls.Maps.MapClickedEventArgs">
+            <summary>
+            Event arguments that are associated with a click/tap event that occurs on the map control.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Maui.Controls.Maps.MapClickedEventArgs.Location">
+            <summary>
+            Gets the location of the click/tap.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.Maps.MapClickedEventArgs.#ctor(Microsoft.Maui.Devices.Sensors.Location)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Maui.Controls.Maps.MapClickedEventArgs"/> class with a location.
+            </summary>
+            <param name="location">The location data associated with this event.</param>
+        </member>
+        <member name="T:Microsoft.Maui.Controls.Maps.PinClickedEventArgs">
+            <summary>
+            Event arguments that are associated with a click/tap event that occurs on a pin element of the map control.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Maui.Controls.Maps.PinClickedEventArgs.HideInfoWindow">
+            <summary>
+            Gets or sets whether the info window should be hidden after the event occurred.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.Maps.PinClickedEventArgs.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Microsoft.Maui.Controls.Maps.PinClickedEventArgs"/> class.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Maui.Controls.Maps.PinType">
+            <summary>
+            Enumeration specifying the various kinds of <see cref="T:Microsoft.Maui.Controls.Maps.Pin"/>.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Maui.Controls.Maps.PinType.Generic">
+            <summary>
+            A generic pin.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Maui.Controls.Maps.PinType.Place">
+            <summary>
+            Pin for a place.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Maui.Controls.Maps.PinType.SavedPin">
+            <summary>
+            Pin for a saved location.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Maui.Controls.Maps.PinType.SearchResult">
+            <summary>
+            Pin for a search result.
+            </summary>
+        </member>
+    </members>
+</doc>

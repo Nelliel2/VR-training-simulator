@@ -1,0 +1,1 @@
+Maps and mapping support for .NET Multi-platform App UI (.NET MAUI) apps. This package only contains the core objects used by .NET MAUI Maps. Please install the Microsoft.Maui.Controls.Maps package to start using .NET MAUI Maps.

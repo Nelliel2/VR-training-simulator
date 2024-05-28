@@ -13,6 +13,7 @@ public class ActToPointer : MonoBehaviour
     static GameObject gameObject;
     SteamVR_Action_Boolean TurnOnLaserPointer;
     public static bool isCementFall = false;
+    static BuilderAnimations builderAnimations;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,7 @@ public class ActToPointer : MonoBehaviour
         // We need to find the laser pointer which we expect attached to our right hand:
         // NOTE: would be better to defend against missing SteamVR_LaserPointer component
         gameObject = GameObject.Find("RightHand");
+        builderAnimations = FindObjectOfType<BuilderAnimations>();
 
         if (gameObject != null)
         {
@@ -187,40 +189,40 @@ public class ActToPointer : MonoBehaviour
         switch (e.target.name)
         {
             case "WoodPlanksBottom":
-                if (!FindObjectOfType<BuilderAnimations>().seenScenes[3])
+                if (!builderAnimations.seenScenes[3])
                 {
-                    FindObjectOfType<BuilderAnimations>().StartScene(3);
+                    builderAnimations.StartScene(3);
                 }
                 break;
             case "WoodPlanksTop":
-                if (!FindObjectOfType<BuilderAnimations>().seenScenes[3])
+                if (!builderAnimations.seenScenes[3])
                 {
-                    FindObjectOfType<BuilderAnimations>().StartScene(3);
+                    builderAnimations.StartScene(3);
                 }
                 break;
             case "WoodPlanksRopes":
-                if (!FindObjectOfType<BuilderAnimations>().seenScenes[3])
+                if (!builderAnimations.seenScenes[3])
                 {
-                    FindObjectOfType<BuilderAnimations>().StartScene(3);
+                    builderAnimations.StartScene(3);
                 }
                 break;
             case "WoodPlanksFabric":
-                if (!FindObjectOfType<BuilderAnimations>().seenScenes[3])
+                if (!builderAnimations.seenScenes[3])
                 {
-                    FindObjectOfType<BuilderAnimations>().StartScene(3);
+                    builderAnimations.StartScene(3);
                 }
                 break;
             case "CementTarget":
-                if (!FindObjectOfType<BuilderAnimations>().seenScenes[1])
+                if (!builderAnimations.seenScenes[1])
                 {
                     isCementFall = true;
-                    FindObjectOfType<BuilderAnimations>().StartScene(1);
+                    builderAnimations.StartScene(1);
                 }
                 break;            
             case "WoodenCableDrum":
-                if (!FindObjectOfType<BuilderAnimations>().seenScenes[2])
+                if (!builderAnimations.seenScenes[2])
                 {
-                    FindObjectOfType<BuilderAnimations>().StartScene(2);
+                    builderAnimations.StartScene(2);
                 }
                 break;
 

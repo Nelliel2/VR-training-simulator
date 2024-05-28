@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Maui.Maps</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Maui.Maps.ICircleMapElement">
+            <summary>
+            Represents a visual element on the map control shaped like a circle.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Maui.Maps.ICircleMapElement.Center">
+            <summary>
+            Gets the center location.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Maui.Maps.ICircleMapElement.Radius">
+            <summary>
+            Gets the radius.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Maui.Maps.IFilledMapElement">
+            <summary>
+            Represents a visual element on the map control that has a fill color.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Maui.Maps.IFilledMapElement.Fill">
+            <summary>
+            Gets the fill color.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Maui.Maps.IMap">
+            <summary>
+            Represents a <see cref="T:Microsoft.Maui.IView"/> that displays a map.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Maui.Maps.IMap.VisibleRegion">
+            <summary>
+            The currently visible MapSpan of this Map.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Maui.Maps.IMap.MapType">
+            <summary>
+            Gets the display type of map that can be shown.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Maui.Maps.IMap.IsShowingUser">
+            <summary>
+            Get whether the Map is showing the user's current location.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Maui.Maps.IMap.IsScrollEnabled">
+            <summary>
+            Get whether the Map is allowed to scroll.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Maui.Maps.IMap.IsZoomEnabled">
+            <summary>
+            Get whether this Map is allowed to zoom.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Maui.Maps.IMap.IsTrafficEnabled">
+            <summary>
+            Get whether this Map is showing traffic information.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Maui.Maps.IMap.Pins">
+            <summary>
+            The pins that are to be shown on this Map.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Maui.Maps.IMap.Elements">
+            <summary>
+            The pins that are to be shown on this Map.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Maui.Maps.IMap.Clicked(Microsoft.Maui.Devices.Sensors.Location)">
+            <summary>
+            Method called by the handler when user clicks on the Map.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Maui.Maps.IMap.MoveToRegion(Microsoft.Maui.Maps.MapSpan)">
+            <summary>
+            Moves the map so that it displays the specified <see cref="T:Microsoft.Maui.Maps.MapSpan"/> region.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Maui.Maps.IMapElement">
+            <summary>
+            Represents an element that can be added to the map control.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Maui.Maps.IMapElement.MapElementId">
+            <summary>
+            Gets or sets the platform counterpart of this map element.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Maui.Maps.IMapPin">
+            <summary>
+            Represents a Pin that displays a map.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Maui.Maps.IMapPin.Address">
+            <summary>
+            The physical address that is associated with this pin.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Maui.Maps.IMapPin.Label">
+            <summary>
+            The label that is shown for this pin.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Maui.Maps.IMapPin.Location">
+            <summary>
+            The geographical location of this pin.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Maui.Maps.MapType">
+            <summary>
+            Specify which visual representation should be shown for a map.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Maui.Maps.MapType.Street">
+            <summary>
+            Shows the <see cref="T:Microsoft.Maui.Maps.IMap" /> as a schematic overview of all roads, streets, etc.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Maui.Maps.MapType.Satellite">
+            <summary>
+            Shows the <see cref="T:Microsoft.Maui.Maps.IMap" /> with satellite imagery.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Maui.Maps.MapType.Hybrid">
+            <summary>
+            Shows the <see cref="T:Microsoft.Maui.Maps.IMap" /> with satellite imagery and a street map overlay.
+            </summary>
+        </member>
+    </members>
+</doc>
