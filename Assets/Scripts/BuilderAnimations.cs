@@ -17,14 +17,20 @@ public class BuilderAnimations : MonoBehaviour
 
 
     public int scene = 0;
-    public bool[] seenScenes = new bool[] {false, false, false, false};
+    public bool[] seenScenes = new bool[] {false, false, false, false, false, false };
 
     private float movementSpeed = 2f;
 
     private Vector3 targetPosition1 = new(-24.8f, 0.1f, 2.9f);
     private Vector3 targetPosition2 = new(-30f, -0.2f, 4.3f);    
     private Vector3 targetPosition3 = new(-35.742f, 0.1f, -1.906f);
+    
+    
+    private Vector3 targetPosition51 = new(-17.45f, 0.1f, 22.6f);
+    //private Vector3 targetRotation51 = new(0, 180, 0);
+    private Vector3 targetPosition52 = new(-17.519f, 0.1f, 17.3f);
 
+    private bool isNotTargetPosition = true;
 
     void Start()
     {
@@ -53,7 +59,7 @@ public class BuilderAnimations : MonoBehaviour
         rbConcreteTubes = GameObject.FindGameObjectWithTag("ConcreteTubes").GetComponent<Rigidbody>();
 
         
-        StartCoroutine(StartingScene(4));
+        StartCoroutine(StartingScene(5));
 
 
 
@@ -74,6 +80,7 @@ public class BuilderAnimations : MonoBehaviour
         animationManager.Stop("Builder", "Falling");        
         animationManager.Stop("Builder", "FallingUp");
         animationManager.Stop("Builder", "Tripping");
+        animationManager.Stop("Builder", "BeingElectrocuted");
 
         animationManager.PlayIdle("Builder");
         
@@ -125,6 +132,13 @@ public class BuilderAnimations : MonoBehaviour
                     //StartCoroutine(FailingConcreteTubes(number));
                     return;
                 case 5:
+                    rb.rotation = Quaternion.Euler(0, 90, 0);
+                    rb.freezeRotation = true;
+                    rb.position = new Vector3(-21.22f, 0.1f, 22.6f);
+                    rb.useGravity = true;
+                    movementSpeed = 2f;
+                    animationManager.Play("Builder", "Walking");
+                    animationManager.ChangeUpdateModeUnscaledTime("Builder");
                     break;
             }        
             scene = number;
@@ -221,10 +235,45 @@ public class BuilderAnimations : MonoBehaviour
                 }
             }
         }
-
-        IEnumerator FallingOnSand()
+        else if ((scene == 5) && (!seenScenes[scene]))
         {
-            yield return new WaitForSeconds(1.1f);
+            if (isNotTargetPosition)
+            {
+                Go(targetPosition51);
+
+                if (transform.position == targetPosition51)
+                {
+
+                    isNotTargetPosition = false;
+                }
+
+            }
+            else
+            {
+                if (transform.rotation != Quaternion.Euler(0, 180, 0))
+                {
+                    transform.Rotate(0, 10, 0);
+                }
+                Go(targetPosition52);
+
+                if (transform.position == targetPosition52)
+                {
+                    animationManager.Play("Builder", "BeingElectrocuted");
+                    seenScenes[scene] = true;
+                    scene = 0;
+                    StartCoroutine(FallingOnSand(5.8f));
+                    StartCoroutine(FallingOnSand(4f));               
+                    print("ok");
+                }
+
+            }
+
+
+        }
+
+        IEnumerator FallingOnSand(float sec = 1.1f)
+        {
+            yield return new WaitForSeconds(sec);
             audioManager.Play("fallingOnSand2");
         }
 
@@ -238,6 +287,7 @@ public class BuilderAnimations : MonoBehaviour
     void Go(Vector3 targetPosition)
     {
         transform.position = Vector3.MoveTowards(transform.position, targetPosition, movementSpeed * Time.deltaTime);
+
     }
 
 }

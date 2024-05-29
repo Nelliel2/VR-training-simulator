@@ -224,8 +224,19 @@ public class ActToPointer : MonoBehaviour
                 {
                     builderAnimations.StartScene(2);
                 }
+                break;            
+            case "Builder2":
+                if (!builderAnimations.seenScenes[4])
+                {
+                    builderAnimations.StartScene(4);
+                }
                 break;
-
+            case "CabelTarget":
+                if (!builderAnimations.seenScenes[5])
+                {
+                    builderAnimations.StartScene(5);
+                }
+                break;
         }
 
     }
