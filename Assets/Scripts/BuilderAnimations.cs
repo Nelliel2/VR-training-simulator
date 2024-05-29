@@ -1,6 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
 public class BuilderAnimations : MonoBehaviour
@@ -33,10 +31,8 @@ public class BuilderAnimations : MonoBehaviour
 
         rb = GetComponent<Rigidbody>();
 
-
         obj = gameObject.AddComponent<VisibilityObject>();
         obj.setVisibilityObject(GetComponent<Renderer>(), gameObject);
-        //obj = new VisibilityObject(GetComponent<Renderer>(), gameObject);
         obj.Hide();
 
         cabel = GameObject.FindGameObjectWithTag("WoodenCableDrum").AddComponent<VisibilityObject>();
@@ -50,10 +46,8 @@ public class BuilderAnimations : MonoBehaviour
         builder2Collision = objBuilder2.transform.Find("mixamorig1:Hips").GetComponent<OnCollision>();
 
         rbConcreteTubes = GameObject.FindGameObjectWithTag("ConcreteTubes").GetComponent<Rigidbody>();
-
-        
+   
         //StartCoroutine(StartingScene(5));
-
 
 
     }
@@ -77,12 +71,6 @@ public class BuilderAnimations : MonoBehaviour
 
         animationManager.PlayIdle("Builder");
         
-        //animationManager.PlayIdle("Builder2");
-        //if (seenScenes[2])
-        //{
-        //    cabel.Hide();
-        //}
-            
 
         if (taskManager.isNotSeenScene())
         { 
@@ -142,14 +130,12 @@ public class BuilderAnimations : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (taskManager.StartNewScene(1))
+        if (taskManager.isStartNewScene(1))
         {
             Go(targetPosition1);
 
             if (transform.position == targetPosition1)
             {
-
-
                 animationManager.Play("CementToFall", "isPointed");
 
                 animationManager.Play("Builder", "Falling");
@@ -157,13 +143,10 @@ public class BuilderAnimations : MonoBehaviour
 
                 taskManager.SceneComplete();
                 StartCoroutine(DisableCementAnimator());
-
-
-                //animationManager.disableAnimator("CementToFall");
             }
 
         }
-        else if (taskManager.StartNewScene(2))
+        else if (taskManager.isStartNewScene(2))
         {
             Go(targetPosition2);
 
@@ -178,7 +161,7 @@ public class BuilderAnimations : MonoBehaviour
 
             }
         }
-        else if (taskManager.StartNewScene(3))
+        else if (taskManager.isStartNewScene(3))
         {
             Go(targetPosition3);
 
@@ -192,31 +175,19 @@ public class BuilderAnimations : MonoBehaviour
 
             }
         }
-        else if (taskManager.StartNewScene(4))
+        else if (taskManager.isStartNewScene(4))
         {
 
             if (builder2Collision.isCollisioning)
             {
-                //Debug.LogError(objBuilder2.transform.Find("Colliders").GetComponent<OnCollision>().isCollisioning);
-
-                //objBuilder2.transform.localScale = new Vector3(objBuilder2.transform.localScale.x, objBuilder2.transform.localScale.y - 0.1f, objBuilder2.transform.localScale.z);
-
-
                 audioManager.Play("fallingHeavyObject");
                 animationManager.Play("Builder2", "Falling");
                 audioManager.Play("screamOfPain2");
                 objBuilder2.transform.localPosition = new Vector3(objBuilder2.transform.localPosition.x, objBuilder2.transform.localPosition.y - 0.1f, objBuilder2.transform.localPosition.z);
                 taskManager.SceneComplete();
-
-                if (objBuilder2.transform.localPosition.y <= -1.75f)
-                {
-
-
-                    //builder2.Hide();
-                }
             }
         }
-        else if (taskManager.StartNewScene(5))
+        else if (taskManager.isStartNewScene(5))
         {
             if (isNotTargetPosition)
             {
@@ -243,7 +214,6 @@ public class BuilderAnimations : MonoBehaviour
                     taskManager.SceneComplete();
                     StartCoroutine(FallingOnSand(5.8f));
                     StartCoroutine(FallingOnSand(4f));               
-                    print("ok");
                 }
 
             }

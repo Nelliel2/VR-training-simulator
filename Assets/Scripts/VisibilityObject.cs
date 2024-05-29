@@ -1,10 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class VisibilityObject : MonoBehaviour
 {
-    // Start is called before the first frame update
     private Renderer rd;
     private GameObject gameObj;
 
@@ -20,11 +17,6 @@ public class VisibilityObject : MonoBehaviour
         gameObj = obj;
 
     }
-    void Start()
-    {
-
-    }
-
 
     public void Hide()
     {
@@ -45,9 +37,5 @@ public class VisibilityObject : MonoBehaviour
             lRenderer.enabled = true;
         }
     }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }

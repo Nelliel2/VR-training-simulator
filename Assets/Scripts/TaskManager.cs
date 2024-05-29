@@ -1,9 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
-using Valve.Newtonsoft.Json;
-using System.IO;
 
 public class TaskManager : MonoBehaviour
 {
@@ -17,7 +12,28 @@ public class TaskManager : MonoBehaviour
     public int scene = 0;
     public bool[] seenScenes = new bool[] { false, false, false, false, false, false };
 
-    
+    public static TaskManager instance;
+
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+        DontDestroyOnLoad(gameObject);
+    }
+
+    void Start()
+    {
+        textTask = GameObject.Find("TaskText").GetComponent<TextMesh>();
+        textScore = GameObject.Find("ScoreText").GetComponent<TextMesh>();
+        textMistake = GameObject.Find("MistakeText").GetComponent<TextMesh>();
+    }
 
     public void SceneComplete()
     {
@@ -27,7 +43,7 @@ public class TaskManager : MonoBehaviour
         textScore.text = "Найдено: " + seenScenesScore + " из 5"; 
     }    
     
-    public bool StartNewScene(int _scene)
+    public bool isStartNewScene(int _scene)
     {
         if (seenScenes[_scene] == false && scene == _scene)
         {
@@ -69,14 +85,6 @@ public class TaskManager : MonoBehaviour
     }
 
 
-
-
-    void Start()
-    {
-        textTask = GameObject.Find("TaskText").GetComponent<TextMesh>();
-        textScore = GameObject.Find("ScoreText").GetComponent<TextMesh>();
-        textMistake = GameObject.Find("MistakeText").GetComponent<TextMesh>();
-    }
 }
 
 

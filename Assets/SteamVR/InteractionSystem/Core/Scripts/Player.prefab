@@ -1526,7 +1526,6 @@ GameObject:
   - component: {fileID: 13693334}
   - component: {fileID: 11455280}
   - component: {fileID: 5475726}
-  - component: {fileID: 9136768377191064391}
   m_Layer: 27
   m_Name: BodyCollider
   m_TagString: Untagged
@@ -1612,18 +1611,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &9136768377191064391
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 191996}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b015a13f50b3eca4f8851ab4a2fd72c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1000010010492814
 GameObject:
   m_ObjectHideFlags: 0

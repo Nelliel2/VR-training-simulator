@@ -11,26 +11,16 @@ public class AnimationManager : MonoBehaviour
 
     void Awake()
     {
-
-        if (instance == null)    // Ёкземпл€р менеджера был найден
+        if (instance == null)    
         {
-            instance = this; // «адаем ссылку на экземпл€р объекта
+            instance = this; 
         }
-        else //if (instance == this)   // Ёкземпл€р объекта уже существует на сцене
+        else 
         {
-            Destroy(gameObject); // ”дал€ем объект
+            Destroy(gameObject); 
             return;
         }
-
-        DontDestroyOnLoad(gameObject);  // “еперь нам нужно указать, чтобы объект не уничтожалс€ при переходе на другую сцену игры
-
-
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+        DontDestroyOnLoad(gameObject);  
     }
 
     public void DisableAnimator(string animator)

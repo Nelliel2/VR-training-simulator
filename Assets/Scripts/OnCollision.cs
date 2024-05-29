@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class OnCollision : MonoBehaviour
@@ -11,11 +9,6 @@ public class OnCollision : MonoBehaviour
     void Start()
     {
         isCollisioning = false;
-    }
-
-    void Update()
-    {
-        
     }
 
     void OnCollisionEnter(Collision collision)

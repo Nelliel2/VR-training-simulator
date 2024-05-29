@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class PlayerManager : MonoBehaviour
 {
-    public static PlayerManager Instance;
+    public static PlayerManager instance;
 
     [SerializeField] private uint _usageLevel;
     [SerializeField] private GameObject _playerPrefab;
@@ -13,16 +11,16 @@ public class PlayerManager : MonoBehaviour
 
     void Awake()
     {
-        if (Instance == null)
+        if (instance == null)
         {
-            Instance = this;
+            instance = this;
         }
-        else if (Instance != this)
+        else
         {
-            Destroy(Instance);
-            Instance = this;
+            Destroy(gameObject);
+            return;
         }
-
+        DontDestroyOnLoad(gameObject);
         OnLoadLevel();
     }
 

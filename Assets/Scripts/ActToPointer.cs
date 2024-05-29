@@ -1,11 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using Valve.VR;
 using Valve.VR.Extras;
-
-
 
 public class ActToPointer : MonoBehaviour
 {
@@ -16,11 +11,8 @@ public class ActToPointer : MonoBehaviour
     static BuilderAnimations builderAnimations;
     static TaskManager taskManager;
 
-    // Start is called before the first frame update
     void Start()
     {
-        // We need to find the laser pointer which we expect attached to our right hand:
-        // NOTE: would be better to defend against missing SteamVR_LaserPointer component
         gameObject = GameObject.Find("RightHand");
         taskManager = FindObjectOfType<TaskManager>();
         builderAnimations = FindObjectOfType<BuilderAnimations>();
@@ -37,26 +29,8 @@ public class ActToPointer : MonoBehaviour
             }
         }
 
-
-
-
-
-        // We need to find the speaking component. This should be attached to our GameObject
-        // (because in this specific example use case, we are using the pointer click to
-        // our character speaking)
-        // NOTE: would be better to defend against missing Speaking component
-
     }
-//    void Update()
-//    {
- //       if (TurnOnLaserPointer.active)
- //       {
- //           GameObject.Find("RightHand").GetComponent<SteamVR_LaserPointer>().active = false;
- //       }
- //       else {
- //           GameObject.Find("RightHand").GetComponent<SteamVR_LaserPointer>().active = true;
- //       }
- //   }
+  
 
     public static void PointerInside(object sender, PointerEventArgs e)
     {
