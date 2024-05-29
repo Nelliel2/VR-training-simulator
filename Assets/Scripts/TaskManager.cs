@@ -10,19 +10,21 @@ public class TaskManager : MonoBehaviour
 
     public TextMesh textTask;
     public TextMesh textScore;
+    public TextMesh textMistake;
 
     public int mistakes = 0;
     public int seenScenesScore = 0;
     public int scene = 0;
     public bool[] seenScenes = new bool[] { false, false, false, false, false, false };
 
+    
 
     public void SceneComplete()
     {
         seenScenes[scene] = true;
         scene = 0;
         seenScenesScore += 1;
-        textScore.text = "Счет: " + seenScenesScore;
+        textScore.text = "Найдено: " + seenScenesScore + " из 5"; 
     }    
     
     public bool StartNewScene(int _scene)
@@ -40,6 +42,7 @@ public class TaskManager : MonoBehaviour
     public void MakeMistake()
     {
         mistakes += 1;
+        textMistake.text = "Совершено ошибок: " + mistakes;
     }
 
     public bool isNotSeenScene()
@@ -72,6 +75,7 @@ public class TaskManager : MonoBehaviour
     {
         textTask = GameObject.Find("TaskText").GetComponent<TextMesh>();
         textScore = GameObject.Find("ScoreText").GetComponent<TextMesh>();
+        textMistake = GameObject.Find("MistakeText").GetComponent<TextMesh>();
     }
 }
 

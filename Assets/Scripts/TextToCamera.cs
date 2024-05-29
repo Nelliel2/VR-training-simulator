@@ -4,21 +4,18 @@ using UnityEngine;
 
 public class TextToCamera : MonoBehaviour
 {
-    public Transform target; Camera cam;
-    private bool[] seenScenes;
+    public Transform target; 
+    Camera cam;
 
     void Start() 
     { 
         cam = GetComponent<Camera>();
-        seenScenes = GameObject.FindObjectOfType<TaskManager>().seenScenes;
     }
 
     void Update()
     {
-        
-        //Vector3 screenPos = cam.WorldToScreenPoint(target.position);
-        //Debug.Log("target is " + screenPos.x + " pixels from the left");
-
+        target.position = transform.position;
+        target.rotation = Quaternion.Euler(target.rotation.x, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z); 
     }
 
 }

@@ -9,7 +9,6 @@ public class PlayerSteps : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        //Debug.LogWarning("Sound not found");
     }
 
 
@@ -21,13 +20,9 @@ public class PlayerSteps : MonoBehaviour
 
     void PlayerStepAudio()
     {
-        if ((rb.velocity.x == 0f && rb.velocity.z == 0f))
+        if (rb.velocity.x == 0f && rb.velocity.z == 0f)
         {
-            //Debug.LogWarning("Sound " + "playerSteps" + " not found");
-
-
             FindObjectOfType<AudioManager>().Play("playerSteps");
-
         }
     }
 }   

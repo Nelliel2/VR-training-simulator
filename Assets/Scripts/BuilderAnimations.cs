@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class BuilderAnimations : MonoBehaviour
 {
-    // Start is called before the first frame update
-
     private Rigidbody rb, rbConcreteTubes;
     private GameObject objBuilder2;
     private VisibilityObject obj, cabel, builder2;
@@ -16,21 +14,15 @@ public class BuilderAnimations : MonoBehaviour
     static private AudioManager audioManager;
     private TaskManager taskManager;
 
-
-    
-
     private float movementSpeed = 2f;
 
     private Vector3 targetPosition1 = new(-24.8f, 0.1f, 2.9f);
     private Vector3 targetPosition2 = new(-30f, -0.2f, 4.3f);    
     private Vector3 targetPosition3 = new(-35.742f, 0.1f, -1.906f);
-    
-    
+ 
     private Vector3 targetPosition51 = new(-17.45f, 0.1f, 22.6f);
-    //private Vector3 targetRotation51 = new(0, 180, 0);
-    private Vector3 targetPosition52 = new(-17.519f, 0.1f, 17.3f);
-
     private bool isNotTargetPosition = true;
+    private Vector3 targetPosition52 = new(-17.519f, 0.1f, 17.3f);
 
     void Start()
     {
@@ -130,7 +122,6 @@ public class BuilderAnimations : MonoBehaviour
                     animationManager.Play("Rope", "Falling");
                     rbConcreteTubes.useGravity = true;
                     taskManager.scene = number;
-                    //StartCoroutine(FailingConcreteTubes(number));
                     return;
                 case 5:
                     rb.rotation = Quaternion.Euler(0, 90, 0);
@@ -149,14 +140,6 @@ public class BuilderAnimations : MonoBehaviour
         }
     }
 
-    IEnumerator FailingConcreteTubes(int number)
-    {
-        yield return new WaitForSeconds(1.71f);
-        
-        taskManager.scene = number;
-    }
-
-    // Update is called once per frame
     void FixedUpdate()
     {
         if (taskManager.StartNewScene(1))
