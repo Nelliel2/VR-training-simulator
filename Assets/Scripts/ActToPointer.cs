@@ -14,6 +14,7 @@ public class ActToPointer : MonoBehaviour
     SteamVR_Action_Boolean TurnOnLaserPointer;
     public static bool isCementFall = false;
     static BuilderAnimations builderAnimations;
+    static TaskManager taskManager;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,7 @@ public class ActToPointer : MonoBehaviour
         // We need to find the laser pointer which we expect attached to our right hand:
         // NOTE: would be better to defend against missing SteamVR_LaserPointer component
         gameObject = GameObject.Find("RightHand");
+        taskManager = FindObjectOfType<TaskManager>();
         builderAnimations = FindObjectOfType<BuilderAnimations>();
 
         if (gameObject != null)
@@ -56,112 +58,55 @@ public class ActToPointer : MonoBehaviour
  //       }
  //   }
 
-        public static void PointerInside(object sender, PointerEventArgs e)
+    public static void PointerInside(object sender, PointerEventArgs e)
     {
-        Debug.Log("PointerInside: " + e.target.name);
+        //Debug.Log("PointerInside: " + e.target.name);
 
-
-        switch (e.target.name)
+        switch (e.target.tag)
         {
-            case "WoodPlanksBottom":
-                if (!FindObjectOfType<BuilderAnimations>().seenScenes[3])
-                {
-                    laserPointer.color = Color.yellow;
-                    laserPointer.clickColor = Color.green;
-                }
-                break;
-            case "WoodPlanksTop":
-                if (!FindObjectOfType<BuilderAnimations>().seenScenes[3])
-                {
-                    laserPointer.color = Color.yellow;
-                    laserPointer.clickColor = Color.green;
-                }
-                break;
-            case "WoodPlanksRopes":
-                if (!FindObjectOfType<BuilderAnimations>().seenScenes[3])
-                {
-                    laserPointer.color = Color.yellow;
-                    laserPointer.clickColor = Color.green;
-                }
-                break;
-            case "WoodPlanksFabric":
-                if (!FindObjectOfType<BuilderAnimations>().seenScenes[3])
-                {
-                    laserPointer.color = Color.yellow;
-                    laserPointer.clickColor = Color.green;
-                }
-                break;
-            case "CementTarget":
-                if (!FindObjectOfType<BuilderAnimations>().seenScenes[1])
-                {
-                    laserPointer.color = Color.yellow;
-                    laserPointer.clickColor = Color.green;
-                }
+            case "isPointed":
+                laserPointer.color = Color.yellow;
                 break;
             case "WoodenCableDrum":
-                if (!FindObjectOfType<BuilderAnimations>().seenScenes[2])
+                if (taskManager.isNotSeenScene(2))
                 {
                     laserPointer.color = Color.yellow;
                     laserPointer.clickColor = Color.green;
                 }
-                break;            
-            case "Wooden_Stand":
-                laserPointer.color = Color.yellow;
-                laserPointer.clickColor = Color.red;
-                break;            
-            case "BrickStack01":
-                laserPointer.color = Color.yellow;
                 break;
-            case "GarbageDoor_B":
-                laserPointer.color = Color.yellow;
-                break;            
-            case "GarbageDoor_A":
-                laserPointer.color = Color.yellow;
+            case "Target":
+                switch (e.target.name)
+                {
+                    case "WoodTarget":
+                        if (taskManager.isNotSeenScene(3))
+                        {
+                            laserPointer.color = Color.yellow;
+                            laserPointer.clickColor = Color.green;
+                        }
+                        break;
+                    case "CementTarget":
+                        if (taskManager.isNotSeenScene(1))
+                        {
+                            laserPointer.color = Color.yellow;
+                            laserPointer.clickColor = Color.green;
+                        }
+                        break;
+                    case "BuilderTarget":
+                        if (taskManager.isNotSeenScene(4))
+                        {
+                            laserPointer.color = Color.yellow;
+                            laserPointer.clickColor = Color.green;
+                        }
+                        break;
+                    case "CabelTarget":
+                        if (taskManager.isNotSeenScene(5))
+                        {
+                            laserPointer.color = Color.yellow;
+                            laserPointer.clickColor = Color.green;
+                        }
+                        break;
+                }
                 break;
-            case "Garbage":
-                laserPointer.color = Color.yellow;
-                break;            
-            case "Bucket":
-                laserPointer.color = Color.yellow;
-                break;            
-            case "RustyShovel":
-                laserPointer.color = Color.yellow;
-                break;
-            case "ConcreteMixer":
-                laserPointer.color = Color.yellow;
-                break;            
-            case "TruckMini":
-                laserPointer.color = Color.yellow;
-                break;            
-            case "Cement":
-                laserPointer.color = Color.yellow;
-                break;            
-            case "Cement_B":
-                laserPointer.color = Color.yellow;
-                break;            
-            case "Scaffolding":
-                laserPointer.color = Color.yellow;
-                break;            
-            case "Container_White":
-                laserPointer.color = Color.yellow;
-                break;            
-            case "Mixer":
-                laserPointer.color = Color.yellow;
-                break;     
-            case "Heap_mud (1)":
-                laserPointer.color = Color.yellow;
-                break;               
-            case "Heap_rubble (1)":
-                laserPointer.color = Color.yellow;
-                break;                   
-            case "BrickStack":
-                laserPointer.color = Color.yellow;
-                break;                
-            case "Toilet":
-                laserPointer.color = Color.yellow;
-                break;                           
-      
-
         }
     }
 
@@ -183,58 +128,48 @@ public class ActToPointer : MonoBehaviour
     public static void PointerClick(object sender, PointerEventArgs e)
     {
         Debug.Log("PointerClick: " + e.target.name + e.target.tag);
-        
+        print("PointerClick: " + e.target.name + e.target.tag);
 
 
-        switch (e.target.name)
+        switch (e.target.tag)
         {
-            case "WoodPlanksBottom":
-                if (!builderAnimations.seenScenes[3])
-                {
-                    builderAnimations.StartScene(3);
-                }
+            case "isPointed":
+                taskManager.MakeMistake();
                 break;
-            case "WoodPlanksTop":
-                if (!builderAnimations.seenScenes[3])
-                {
-                    builderAnimations.StartScene(3);
-                }
-                break;
-            case "WoodPlanksRopes":
-                if (!builderAnimations.seenScenes[3])
-                {
-                    builderAnimations.StartScene(3);
-                }
-                break;
-            case "WoodPlanksFabric":
-                if (!builderAnimations.seenScenes[3])
-                {
-                    builderAnimations.StartScene(3);
-                }
-                break;
-            case "CementTarget":
-                if (!builderAnimations.seenScenes[1])
-                {
-                    isCementFall = true;
-                    builderAnimations.StartScene(1);
-                }
-                break;            
             case "WoodenCableDrum":
-                if (!builderAnimations.seenScenes[2])
+                if (taskManager.isNotSeenScene(2))
                 {
                     builderAnimations.StartScene(2);
                 }
-                break;            
-            case "Builder2":
-                if (!builderAnimations.seenScenes[4])
-                {
-                    builderAnimations.StartScene(4);
-                }
                 break;
-            case "CabelTarget":
-                if (!builderAnimations.seenScenes[5])
+            case "Target":
+                switch (e.target.name)
                 {
-                    builderAnimations.StartScene(5);
+                    case "WoodTarget":
+                        if (taskManager.isNotSeenScene(3))
+                        {
+                            builderAnimations.StartScene(3);
+                        }
+                        break;
+                    case "CementTarget":
+                        if (taskManager.isNotSeenScene(1))
+                        {
+                            isCementFall = true;
+                            builderAnimations.StartScene(1);
+                        }
+                        break;   
+                    case "BuilderTarget":
+                        if (taskManager.isNotSeenScene(4))
+                        {
+                            builderAnimations.StartScene(4);
+                        }
+                        break;
+                    case "CabelTarget":
+                        if (taskManager.isNotSeenScene(5))
+                        {
+                            builderAnimations.StartScene(5);
+                        }
+                        break;
                 }
                 break;
         }

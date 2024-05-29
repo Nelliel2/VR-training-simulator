@@ -7,6 +7,8 @@ TagManager:
   - WoodenCableDrum
   - Builder2
   - ConcreteTubes
+  - isPointed
+  - Target
   layers:
   - Default
   - TransparentFX

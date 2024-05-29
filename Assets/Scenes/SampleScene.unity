@@ -243,7 +243,7 @@ GameObject:
   - component: {fileID: 70184739}
   m_Layer: 0
   m_Name: WoodPlanksBottom
-  m_TagString: Untagged
+  m_TagString: isPointed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -790,6 +790,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wooden_Stand_B
       objectReference: {fileID: 0}
+    - target: {fileID: 1841898010600736, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 4351209550710614, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -909,6 +913,111 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 1077243136045008663, guid: 171c57af799b8114fa49032e46079abe, type: 3}
+--- !u!1 &236555737
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 236555738}
+  - component: {fileID: 236555741}
+  - component: {fileID: 236555740}
+  - component: {fileID: 236555739}
+  m_Layer: 0
+  m_Name: WoodTarget
+  m_TagString: Target
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &236555738
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236555737}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.28486767, z: -0, w: 0.95856684}
+  m_LocalPosition: {x: -8.7684, y: -0.2299, z: -14.08}
+  m_LocalScale: {x: 2.800949, y: 0.36233008, z: 4.308809}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1528268792731696500}
+  m_LocalEulerAnglesHint: {x: 0, y: 33.102, z: 0}
+--- !u!65 &236555739
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236555737}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 5, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &236555740
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236555737}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &236555741
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236555737}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &254290442
 GameObject:
   m_ObjectHideFlags: 0
@@ -1133,7 +1242,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1251868619462698, guid: 3feea208febe63b4f91085a75560d00a, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: isPointed
       objectReference: {fileID: 0}
     - target: {fileID: 1251868619462698, guid: 3feea208febe63b4f91085a75560d00a, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1345,6 +1454,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PalletJack
       objectReference: {fileID: 0}
+    - target: {fileID: 1234014745587384, guid: bd12278208b1cb2439520aa9a587592b, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 4292317123249144, guid: bd12278208b1cb2439520aa9a587592b, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.1
@@ -1427,7 +1540,7 @@ GameObject:
   - component: {fileID: 385192485}
   m_Layer: 0
   m_Name: Containers
-  m_TagString: Untagged
+  m_TagString: isPointed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3120,7 +3233,7 @@ GameObject:
   - component: {fileID: 434625598}
   m_Layer: 0
   m_Name: WoodPlanksTop (3)
-  m_TagString: Untagged
+  m_TagString: isPointed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3219,9 +3332,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 385192485}
     m_Modifications:
+    - target: {fileID: 1063302154728884, guid: c092679248145694c838420bde2178e7, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
+    - target: {fileID: 1097113769174448, guid: c092679248145694c838420bde2178e7, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
+    - target: {fileID: 1188054200596522, guid: c092679248145694c838420bde2178e7, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
+    - target: {fileID: 1523432524127982, guid: c092679248145694c838420bde2178e7, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 1951688320879146, guid: c092679248145694c838420bde2178e7, type: 3}
       propertyPath: m_Name
       value: Container_Black
+      objectReference: {fileID: 0}
+    - target: {fileID: 1951688320879146, guid: c092679248145694c838420bde2178e7, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
       objectReference: {fileID: 0}
     - target: {fileID: 4162139616595284, guid: c092679248145694c838420bde2178e7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3262,6 +3395,14 @@ PrefabInstance:
     - target: {fileID: 4162139616595284, guid: c092679248145694c838420bde2178e7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64994674932749642, guid: c092679248145694c838420bde2178e7, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64994674932749642, guid: c092679248145694c838420bde2178e7, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3353,6 +3494,10 @@ PrefabInstance:
     - target: {fileID: 1284256924973048, guid: 115553f4767b68f4388af16b7bf00d2b, type: 3}
       propertyPath: m_Name
       value: Water_Tank (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1284256924973048, guid: 115553f4767b68f4388af16b7bf00d2b, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
       objectReference: {fileID: 0}
     - target: {fileID: 4165232730632458, guid: 115553f4767b68f4388af16b7bf00d2b, type: 3}
       propertyPath: m_LocalScale.x
@@ -3489,6 +3634,111 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &534354209
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 534354210}
+  - component: {fileID: 534354213}
+  - component: {fileID: 534354212}
+  - component: {fileID: 534354211}
+  m_Layer: 0
+  m_Name: BuilderTarget
+  m_TagString: Target
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &534354210
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534354209}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.008726558, z: -0, w: 0.999962}
+  m_LocalPosition: {x: 20.21, y: 0.0368, z: -5.094}
+  m_LocalScale: {x: 0.54992276, y: 0.340091, z: 0.71627766}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1528268792731696500}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &534354211
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534354209}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.9188235, y: 5.2728643, z: 0.8428249}
+  m_Center: {x: 0.5119657, y: 2.1364605, z: 0.078587174}
+--- !u!23 &534354212
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534354209}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &534354213
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534354209}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &543636051
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3500,6 +3750,10 @@ PrefabInstance:
     - target: {fileID: 1841898010600736, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
       propertyPath: m_Name
       value: Wooden_Stand_B
+      objectReference: {fileID: 0}
+    - target: {fileID: 1841898010600736, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
       objectReference: {fileID: 0}
     - target: {fileID: 4351209550710614, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3581,6 +3835,9 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1749110996}
+  - {fileID: 1660922017}
+  - {fileID: 1316114424}
+  - {fileID: 1166060247}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &575990688 stripped
@@ -3614,7 +3871,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1251868619462698, guid: 3feea208febe63b4f91085a75560d00a, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: isPointed
       objectReference: {fileID: 0}
     - target: {fileID: 1251868619462698, guid: 3feea208febe63b4f91085a75560d00a, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -3923,8 +4180,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b909349ae0425924896148e4ac0264f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: 0
-  seenScenes: 000000000000
 --- !u!1 &638687268 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4402405717547116215, guid: 171c57af799b8114fa49032e46079abe, type: 3}
@@ -3964,7 +4219,7 @@ GameObject:
   - component: {fileID: 654087764}
   m_Layer: 0
   m_Name: Pallets (1)
-  m_TagString: Untagged
+  m_TagString: isPointed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4372,7 +4627,7 @@ GameObject:
   - component: {fileID: 761974322}
   m_Layer: 0
   m_Name: WoodPlanksBottom (1)
-  m_TagString: Untagged
+  m_TagString: isPointed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4505,7 +4760,7 @@ GameObject:
   - component: {fileID: 825949867}
   m_Layer: 0
   m_Name: WoodPlanksBottom (3)
-  m_TagString: Untagged
+  m_TagString: isPointed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4607,6 +4862,10 @@ PrefabInstance:
     - target: {fileID: 1841898010600736, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
       propertyPath: m_Name
       value: Wooden_Stand_B
+      objectReference: {fileID: 0}
+    - target: {fileID: 1841898010600736, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
       objectReference: {fileID: 0}
     - target: {fileID: 4351209550710614, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
       propertyPath: m_LocalScale.x
@@ -4750,6 +5009,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BrickStack01
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c3412978526fed54eb7041b046cb48c4, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4773,7 +5036,7 @@ GameObject:
   - component: {fileID: 857566159}
   m_Layer: 0
   m_Name: WoodPlanksRopes (2)
-  m_TagString: Untagged
+  m_TagString: isPointed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4855,7 +5118,7 @@ GameObject:
   - component: {fileID: 862276023}
   m_Layer: 0
   m_Name: Fences
-  m_TagString: Untagged
+  m_TagString: isPointed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5303,7 +5566,7 @@ GameObject:
   - component: {fileID: 965680718}
   m_Layer: 0
   m_Name: WoodPlanksRopes (1)
-  m_TagString: Untagged
+  m_TagString: isPointed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -5429,6 +5692,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BrickStack01
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c3412978526fed54eb7041b046cb48c4, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5536,6 +5803,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 93e4916cad80b1e459ee209fdd1ce348, type: 3}
       propertyPath: m_Name
       value: Tower_crane2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 93e4916cad80b1e459ee209fdd1ce348, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
       objectReference: {fileID: 0}
     - target: {fileID: 8873145635909941288, guid: 93e4916cad80b1e459ee209fdd1ce348, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5781,6 +6052,126 @@ CapsuleCollider:
   m_Height: 0.67754185
   m_Direction: 1
   m_Center: {x: 0, y: 0.12413079, z: 0.0421877}
+--- !u!1 &1166060246
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1166060247}
+  - component: {fileID: 1166060251}
+  - component: {fileID: 1166060250}
+  - component: {fileID: 1166060249}
+  - component: {fileID: 1166060248}
+  m_Layer: 13
+  m_Name: Plane (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1166060247
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1166060246}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.5923085, z: -0, w: 0.80571127}
+  m_LocalPosition: {x: 36.923798, y: -0.15, z: 27.937698}
+  m_LocalScale: {x: 0.38824537, y: 1, z: 0.8990012}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 548686030}
+  m_LocalEulerAnglesHint: {x: 0, y: 72.642, z: 0}
+--- !u!65 &1166060248
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1166060246}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10, y: 2.220446e-16, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1166060249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1166060246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84a4f15a3179f1d4993aded11f4d0232, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  locked: 0
+  markerActive: 1
+--- !u!23 &1166060250
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1166060246}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 417e639b66cd3a24e9c5312be99ce3bd, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1166060251
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1166060246}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1167105008 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4402405717547116215, guid: 9e70841c7fa18a54da7e5f96d5aceb53, type: 3}
@@ -5823,7 +6214,7 @@ GameObject:
   - component: {fileID: 1176676282}
   m_Layer: 0
   m_Name: WoodPlanksBottom (2)
-  m_TagString: Untagged
+  m_TagString: isPointed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -5914,6 +6305,111 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1176676280}
   m_Mesh: {fileID: 4300000, guid: dc3823d88992503449e107c452552b14, type: 3}
+--- !u!1 &1203938212
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1203938213}
+  - component: {fileID: 1203938216}
+  - component: {fileID: 1203938215}
+  - component: {fileID: 1203938214}
+  m_Layer: 0
+  m_Name: CabelDrumTarget
+  m_TagString: Target
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1203938213
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203938212}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -0.08370003, y: -0.03679908, z: -0.068199664}
+  m_LocalScale: {x: 0.8691944, y: 1.1074339, z: 1.104547}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3215857501456347259}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!65 &1203938214
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203938212}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 0.8282863, z: 0.8943289}
+  m_Center: {x: -0.0000000020837954, y: 0.099283114, z: 0.05542119}
+--- !u!23 &1203938215
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203938212}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1203938216
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203938212}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1235181138 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3163551eec488544fb1789763565fa70, type: 3}
@@ -5938,7 +6434,7 @@ GameObject:
   - component: {fileID: 1252763617}
   m_Layer: 0
   m_Name: WoodPlanksTop (2)
-  m_TagString: Untagged
+  m_TagString: isPointed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -6138,6 +6634,126 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a135b1a2cb9c8f488d4dd00c55ab283, type: 3}
+--- !u!1 &1316114423
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1316114424}
+  - component: {fileID: 1316114428}
+  - component: {fileID: 1316114427}
+  - component: {fileID: 1316114426}
+  - component: {fileID: 1316114425}
+  m_Layer: 13
+  m_Name: Plane (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1316114424
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316114423}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 23.638, y: -0.49, z: 25.0956}
+  m_LocalScale: {x: 1.1937976, y: 1, z: 0.75463945}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 548686030}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1316114425
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316114423}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10, y: 2.220446e-16, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1316114426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316114423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84a4f15a3179f1d4993aded11f4d0232, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  locked: 0
+  markerActive: 1
+--- !u!23 &1316114427
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316114423}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 417e639b66cd3a24e9c5312be99ce3bd, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1316114428
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316114423}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1333452167
 GameObject:
   m_ObjectHideFlags: 0
@@ -6151,7 +6767,7 @@ GameObject:
   - component: {fileID: 1333452170}
   m_Layer: 0
   m_Name: Rope
-  m_TagString: Untagged
+  m_TagString: isPointed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6645,6 +7261,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wood_Box
       objectReference: {fileID: 0}
+    - target: {fileID: 1385344244372434, guid: 148b08713b4d0a446bd0f1ae6462a090, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 4229645804572984, guid: 148b08713b4d0a446bd0f1ae6462a090, type: 3}
       propertyPath: m_LocalPosition.x
       value: 27.386002
@@ -6684,6 +7304,10 @@ PrefabInstance:
     - target: {fileID: 4229645804572984, guid: 148b08713b4d0a446bd0f1ae6462a090, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64065656541303242, guid: 148b08713b4d0a446bd0f1ae6462a090, type: 3}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6902,6 +7526,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Water_Tank
       objectReference: {fileID: 0}
+    - target: {fileID: 1284256924973048, guid: 115553f4767b68f4388af16b7bf00d2b, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 4165232730632458, guid: 115553f4767b68f4388af16b7bf00d2b, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.8
@@ -6996,6 +7624,126 @@ CapsuleCollider:
   m_Height: 0.55507565
   m_Direction: 1
   m_Center: {x: -0.024732996, y: 0.22246319, z: -5.0941606e-10}
+--- !u!1 &1660922016
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1660922017}
+  - component: {fileID: 1660922021}
+  - component: {fileID: 1660922020}
+  - component: {fileID: 1660922019}
+  - component: {fileID: 1660922018}
+  m_Layer: 13
+  m_Name: Plane (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1660922017
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660922016}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 32.9372, y: -0.49, z: 16.6344}
+  m_LocalScale: {x: 3.0610154, y: 1, z: 0.9334976}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 548686030}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1660922018
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660922016}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10, y: 2.220446e-16, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1660922019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660922016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84a4f15a3179f1d4993aded11f4d0232, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  locked: 0
+  markerActive: 1
+--- !u!23 &1660922020
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660922016}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 417e639b66cd3a24e9c5312be99ce3bd, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1660922021
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660922016}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1672005490
 GameObject:
   m_ObjectHideFlags: 0
@@ -7010,7 +7758,7 @@ GameObject:
   - component: {fileID: 1672005492}
   m_Layer: 0
   m_Name: CabelTarget
-  m_TagString: Untagged
+  m_TagString: Target
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7140,7 +7888,7 @@ GameObject:
   - component: {fileID: 1718241897}
   m_Layer: 0
   m_Name: Tubes
-  m_TagString: Untagged
+  m_TagString: isPointed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7167,63 +7915,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4660510095588087495, guid: 0305d764ed281864f956d5feacd057e9, type: 3}
   m_PrefabInstance: {fileID: 8323648367137271744}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1731462145
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 125956, guid: 73ac470d3d909d645a6c89a4664b6849, type: 3}
-      propertyPath: m_Name
-      value: TeleportPoint
-      objectReference: {fileID: 0}
-    - target: {fileID: 428928, guid: 73ac470d3d909d645a6c89a4664b6849, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -26.818558
-      objectReference: {fileID: 0}
-    - target: {fileID: 428928, guid: 73ac470d3d909d645a6c89a4664b6849, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.03354311
-      objectReference: {fileID: 0}
-    - target: {fileID: 428928, guid: 73ac470d3d909d645a6c89a4664b6849, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -6.136892
-      objectReference: {fileID: 0}
-    - target: {fileID: 428928, guid: 73ac470d3d909d645a6c89a4664b6849, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 428928, guid: 73ac470d3d909d645a6c89a4664b6849, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 428928, guid: 73ac470d3d909d645a6c89a4664b6849, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 428928, guid: 73ac470d3d909d645a6c89a4664b6849, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 428928, guid: 73ac470d3d909d645a6c89a4664b6849, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 428928, guid: 73ac470d3d909d645a6c89a4664b6849, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 428928, guid: 73ac470d3d909d645a6c89a4664b6849, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 73ac470d3d909d645a6c89a4664b6849, type: 3}
 --- !u!1 &1749110995
 GameObject:
   m_ObjectHideFlags: 0
@@ -7243,7 +7934,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1749110996
 Transform:
   m_ObjectHideFlags: 0
@@ -7253,8 +7944,8 @@ Transform:
   m_GameObject: {fileID: 1749110995}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.62, y: -0.49, z: 0.2353878}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 4.38, y: -0.49, z: 0.3221}
+  m_LocalScale: {x: 3.3430133, y: 1, z: 1.0174}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 548686030}
@@ -7398,7 +8089,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1251868619462698, guid: 3feea208febe63b4f91085a75560d00a, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: isPointed
       objectReference: {fileID: 0}
     - target: {fileID: 1251868619462698, guid: 3feea208febe63b4f91085a75560d00a, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -7582,6 +8273,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wooden_Stand_B
       objectReference: {fileID: 0}
+    - target: {fileID: 1841898010600736, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 4351209550710614, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -7688,6 +8383,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BrickStack01
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c3412978526fed54eb7041b046cb48c4, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7737,6 +8436,10 @@ PrefabInstance:
     - target: {fileID: 1841898010600736, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
       propertyPath: m_Name
       value: Wooden_Stand_B
+      objectReference: {fileID: 0}
+    - target: {fileID: 1841898010600736, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
       objectReference: {fileID: 0}
     - target: {fileID: 4351209550710614, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7800,13 +8503,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: WoodPlanksRopes
       objectReference: {fileID: 0}
+    - target: {fileID: 1051380930046992, guid: 7d5203bee65999746a2724a098910ec2, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 1136039255361954, guid: 7d5203bee65999746a2724a098910ec2, type: 3}
       propertyPath: m_Name
       value: WoodPlanks (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1136039255361954, guid: 7d5203bee65999746a2724a098910ec2, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 1180646977474904, guid: 7d5203bee65999746a2724a098910ec2, type: 3}
       propertyPath: m_Name
       value: WoodPlanksTop
+      objectReference: {fileID: 0}
+    - target: {fileID: 1180646977474904, guid: 7d5203bee65999746a2724a098910ec2, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
       objectReference: {fileID: 0}
     - target: {fileID: 1192221398560662, guid: 7d5203bee65999746a2724a098910ec2, type: 3}
       propertyPath: m_Name
@@ -7915,6 +8630,10 @@ PrefabInstance:
     - target: {fileID: 1841898010600736, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
       propertyPath: m_Name
       value: Wooden_Stand_B
+      objectReference: {fileID: 0}
+    - target: {fileID: 1841898010600736, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
       objectReference: {fileID: 0}
     - target: {fileID: 4351209550710614, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8131,8 +8850,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b909349ae0425924896148e4ac0264f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: 0
-  seenScenes: 0000000000
 --- !u!95 &1921618536
 Animator:
   serializedVersion: 5
@@ -13260,6 +13977,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wooden_Stand_B
       objectReference: {fileID: 0}
+    - target: {fileID: 1841898010600736, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 4351209550710614, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -13394,6 +14115,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BrickStack01
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c3412978526fed54eb7041b046cb48c4, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13415,6 +14140,10 @@ PrefabInstance:
     - target: {fileID: 1182598360016950, guid: e67e05872340e9f40a9c847f3098e938, type: 3}
       propertyPath: m_Name
       value: Electric_Fuse_Box
+      objectReference: {fileID: 0}
+    - target: {fileID: 1182598360016950, guid: e67e05872340e9f40a9c847f3098e938, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
       objectReference: {fileID: 0}
     - target: {fileID: 4164480314259190, guid: e67e05872340e9f40a9c847f3098e938, type: 3}
       propertyPath: m_LocalScale.x
@@ -13605,6 +14334,10 @@ PrefabInstance:
     - target: {fileID: 1841898010600736, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
       propertyPath: m_Name
       value: Wooden_Stand_B
+      objectReference: {fileID: 0}
+    - target: {fileID: 1841898010600736, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
       objectReference: {fileID: 0}
     - target: {fileID: 4351209550710614, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16676,7 +17409,7 @@ GameObject:
   - component: {fileID: 2127309042}
   m_Layer: 0
   m_Name: CementTarget
-  m_TagString: Untagged
+  m_TagString: Target
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16885,7 +17618,7 @@ GameObject:
   - component: {fileID: 2144254684}
   m_Layer: 0
   m_Name: WoodPlanksTop (1)
-  m_TagString: Untagged
+  m_TagString: isPointed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -17451,6 +18184,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScaffoldingTarget
       objectReference: {fileID: 0}
+    - target: {fileID: 135316, guid: 4707581494a4031438fbad227829f0db, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 438652, guid: 4707581494a4031438fbad227829f0db, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -17554,9 +18291,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1545992252682157330, guid: c43277e5781d22745b6c68332b8392d5, type: 3}
+      propertyPath: m_Text
+      value: "\u041D\u0430\u0439\u0434\u0435\u043D\u043E: 0 \u0438\u0437 5"
+      objectReference: {fileID: 0}
     - target: {fileID: 1720024003161186437, guid: c43277e5781d22745b6c68332b8392d5, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 1720024003161186437, guid: c43277e5781d22745b6c68332b8392d5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4130954949450770670, guid: c43277e5781d22745b6c68332b8392d5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17597,6 +18342,27 @@ PrefabInstance:
     - target: {fileID: 4130954949450770670, guid: c43277e5781d22745b6c68332b8392d5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4685750077487951208, guid: c43277e5781d22745b6c68332b8392d5, type: 3}
+      propertyPath: m_Text
+      value: "\u041D\u0430\u0439\u0434\u0438\u0442\u0435 \u043F\u043E\u0442\u0435\u043D\u0446\u0438\u0430\u043B\u044C\u043D\u044B\u0435
+        \u0443\u0433\u0440\u043E\u0437\u044B"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4685750077487951208, guid: c43277e5781d22745b6c68332b8392d5, type: 3}
+      propertyPath: m_Color.rgba
+      value: 4289572269
+      objectReference: {fileID: 0}
+    - target: {fileID: 5918048873603146914, guid: c43277e5781d22745b6c68332b8392d5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 7393548183747055536, guid: c43277e5781d22745b6c68332b8392d5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8742126497247826635, guid: c43277e5781d22745b6c68332b8392d5, type: 3}
+      propertyPath: m_Name
+      value: MistakeText
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18384,6 +19150,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wooden_Stand_B
       objectReference: {fileID: 0}
+    - target: {fileID: 1841898010600736, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 4351209550710614, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -18769,7 +19539,7 @@ GameObject:
   - component: {fileID: 3663229549638026717}
   m_Layer: 0
   m_Name: Scaffoldings (2)
-  m_TagString: Untagged
+  m_TagString: isPointed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19117,7 +19887,7 @@ GameObject:
   - component: {fileID: 3185463512351480406}
   m_Layer: 0
   m_Name: Pallets
-  m_TagString: Untagged
+  m_TagString: isPointed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19363,6 +20133,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cement
       objectReference: {fileID: 0}
+    - target: {fileID: 1375233789303162, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.6713371
@@ -19420,13 +20194,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Garbage
       objectReference: {fileID: 0}
+    - target: {fileID: 1153904038062340, guid: 36185661c9efc3744a17898686b687bf, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 1524585419440478, guid: 36185661c9efc3744a17898686b687bf, type: 3}
       propertyPath: m_Name
       value: GarbageDoor_B
       objectReference: {fileID: 0}
+    - target: {fileID: 1524585419440478, guid: 36185661c9efc3744a17898686b687bf, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 1901638631687534, guid: 36185661c9efc3744a17898686b687bf, type: 3}
       propertyPath: m_Name
       value: GarbageDoor_A
+      objectReference: {fileID: 0}
+    - target: {fileID: 1901638631687534, guid: 36185661c9efc3744a17898686b687bf, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
       objectReference: {fileID: 0}
     - target: {fileID: 4616418588631314, guid: 36185661c9efc3744a17898686b687bf, type: 3}
       propertyPath: m_LocalScale.x
@@ -19659,7 +20445,7 @@ GameObject:
   - component: {fileID: 8382157769604639829}
   m_Layer: 0
   m_Name: GameObject (1)
-  m_TagString: Untagged
+  m_TagString: isPointed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21094,6 +21880,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wooden_Stand_B
       objectReference: {fileID: 0}
+    - target: {fileID: 1841898010600736, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 4351209550710614, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -21186,6 +21976,10 @@ PrefabInstance:
     - target: {fileID: 1841898010600736, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
       propertyPath: m_Name
       value: Wooden_Stand_B
+      objectReference: {fileID: 0}
+    - target: {fileID: 1841898010600736, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
       objectReference: {fileID: 0}
     - target: {fileID: 4351209550710614, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21406,9 +22200,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8068073526183931155, guid: 3924fc14f08cfc242b8f6cb88d8d1a0e, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
+    - target: {fileID: -7318072807127031672, guid: 3924fc14f08cfc242b8f6cb88d8d1a0e, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
+    - target: {fileID: -2383057470141216921, guid: 3924fc14f08cfc242b8f6cb88d8d1a0e, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3924fc14f08cfc242b8f6cb88d8d1a0e, type: 3}
       propertyPath: m_Name
       value: model (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3924fc14f08cfc242b8f6cb88d8d1a0e, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
+    - target: {fileID: 3490315735572815953, guid: 3924fc14f08cfc242b8f6cb88d8d1a0e, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
+    - target: {fileID: 6037384984517086383, guid: 3924fc14f08cfc242b8f6cb88d8d1a0e, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -21585,6 +22403,10 @@ PrefabInstance:
     - target: {fileID: 135316, guid: 4707581494a4031438fbad227829f0db, type: 3}
       propertyPath: m_Name
       value: Scaffolding (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 135316, guid: 4707581494a4031438fbad227829f0db, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
       objectReference: {fileID: 0}
     - target: {fileID: 438652, guid: 4707581494a4031438fbad227829f0db, type: 3}
       propertyPath: m_LocalScale.x
@@ -22038,6 +22860,10 @@ PrefabInstance:
     - target: {fileID: 1841898010600736, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
       propertyPath: m_Name
       value: Wooden_Stand_B
+      objectReference: {fileID: 0}
+    - target: {fileID: 1841898010600736, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
       objectReference: {fileID: 0}
     - target: {fileID: 4351209550710614, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23589,7 +24415,7 @@ GameObject:
   - component: {fileID: 6225095505428727594}
   m_Layer: 0
   m_Name: Toilet
-  m_TagString: Untagged
+  m_TagString: isPointed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24210,6 +25036,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scaffolding (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 135316, guid: 4707581494a4031438fbad227829f0db, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 438652, guid: 4707581494a4031438fbad227829f0db, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -24549,6 +25379,7 @@ Transform:
   - {fileID: 1718241897}
   - {fileID: 3215857501456347259}
   - {fileID: 7001135496837820734}
+  - {fileID: 236555738}
   - {fileID: 2127309041}
   - {fileID: 8600105919223627335}
   - {fileID: 5571218791484082895}
@@ -24560,6 +25391,7 @@ Transform:
   - {fileID: 344090659}
   - {fileID: 654087764}
   - {fileID: 1672005491}
+  - {fileID: 534354210}
   - {fileID: 1628451445}
   - {fileID: 472524266}
   - {fileID: 164130552}
@@ -25635,6 +26467,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cement
       objectReference: {fileID: 0}
+    - target: {fileID: 1375233789303162, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.05493927
@@ -26568,7 +27404,7 @@ GameObject:
   - component: {fileID: 507599059513438065}
   m_Layer: 0
   m_Name: Cement
-  m_TagString: Untagged
+  m_TagString: isPointed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26728,6 +27564,10 @@ PrefabInstance:
     - target: {fileID: 1499310753839832, guid: 491d82b1acc78ba4d95af96a6fe1b5a8, type: 3}
       propertyPath: m_Name
       value: Cement
+      objectReference: {fileID: 0}
+    - target: {fileID: 1499310753839832, guid: 491d82b1acc78ba4d95af96a6fe1b5a8, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
       objectReference: {fileID: 0}
     - target: {fileID: 4214389346116376, guid: 491d82b1acc78ba4d95af96a6fe1b5a8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26903,9 +27743,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3185463512351480406}
     m_Modifications:
+    - target: {fileID: 1756903866739868, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 1841898010600736, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
       propertyPath: m_Name
       value: Wooden_Stand_B
+      objectReference: {fileID: 0}
+    - target: {fileID: 1841898010600736, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
       objectReference: {fileID: 0}
     - target: {fileID: 4351209550710614, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -27054,6 +27902,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cement
       objectReference: {fileID: 0}
+    - target: {fileID: 1499310753839832, guid: 491d82b1acc78ba4d95af96a6fe1b5a8, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 4214389346116376, guid: 491d82b1acc78ba4d95af96a6fe1b5a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.06852341
@@ -27163,6 +28015,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tower_crane
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 93e4916cad80b1e459ee209fdd1ce348, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -27250,7 +28106,7 @@ GameObject:
   - component: {fileID: 7779321577047460974}
   m_Layer: 0
   m_Name: BrickStack
-  m_TagString: Untagged
+  m_TagString: isPointed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27513,6 +28369,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scaffolding (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 135316, guid: 4707581494a4031438fbad227829f0db, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 438652, guid: 4707581494a4031438fbad227829f0db, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -27649,7 +28509,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textTask: {fileID: 386103587}
   textScore: {fileID: 1865028316}
-  score: 0
+  mistakes: 0
+  seenScenesScore: 0
+  scene: 0
+  seenScenes: 000000000000
 --- !u!4 &2152745632987206278 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4782874753337956, guid: d0942da8e0756d64fa0dc5f970badb08, type: 3}
@@ -27755,6 +28618,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1b156094e6ae4e844b7539f21b1130f1, type: 3}
       propertyPath: m_Name
       value: ConcreteMixer
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1b156094e6ae4e844b7539f21b1130f1, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -29656,6 +30523,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scaffolding (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 135316, guid: 4707581494a4031438fbad227829f0db, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 438652, guid: 4707581494a4031438fbad227829f0db, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -29855,6 +30726,10 @@ PrefabInstance:
     - target: {fileID: 135316, guid: 4707581494a4031438fbad227829f0db, type: 3}
       propertyPath: m_Name
       value: Scaffolding (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 135316, guid: 4707581494a4031438fbad227829f0db, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
       objectReference: {fileID: 0}
     - target: {fileID: 438652, guid: 4707581494a4031438fbad227829f0db, type: 3}
       propertyPath: m_LocalPosition.x
@@ -30559,6 +31434,10 @@ PrefabInstance:
     - target: {fileID: 1375233789303162, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_Name
       value: Cement
+      objectReference: {fileID: 0}
+    - target: {fileID: 1375233789303162, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
       objectReference: {fileID: 0}
     - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -31391,6 +32270,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scaffolding (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 135316, guid: 4707581494a4031438fbad227829f0db, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 438652, guid: 4707581494a4031438fbad227829f0db, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -31586,6 +32469,10 @@ PrefabInstance:
     - target: {fileID: 135316, guid: 4707581494a4031438fbad227829f0db, type: 3}
       propertyPath: m_Name
       value: Scaffolding (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 135316, guid: 4707581494a4031438fbad227829f0db, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
       objectReference: {fileID: 0}
     - target: {fileID: 438652, guid: 4707581494a4031438fbad227829f0db, type: 3}
       propertyPath: m_LocalScale.x
@@ -31831,6 +32718,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cement
       objectReference: {fileID: 0}
+    - target: {fileID: 1375233789303162, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.030921936
@@ -31983,6 +32874,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cement
       objectReference: {fileID: 0}
+    - target: {fileID: 1375233789303162, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.2060604
@@ -32047,7 +32942,7 @@ GameObject:
   - component: {fileID: 2623465765200824822}
   m_Layer: 0
   m_Name: Scaffoldings
-  m_TagString: Untagged
+  m_TagString: isPointed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34118,6 +35013,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cement
       objectReference: {fileID: 0}
+    - target: {fileID: 1375233789303162, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.1790085
@@ -34197,6 +35096,10 @@ PrefabInstance:
     - target: {fileID: 1375233789303162, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_Name
       value: Cement
+      objectReference: {fileID: 0}
+    - target: {fileID: 1375233789303162, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
       objectReference: {fileID: 0}
     - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -35516,6 +36419,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scaffolding (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 135316, guid: 4707581494a4031438fbad227829f0db, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 438652, guid: 4707581494a4031438fbad227829f0db, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -35828,9 +36735,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 385192485}
     m_Modifications:
+    - target: {fileID: 1138733082093158, guid: 74583c5879a995f449ea1f805a6bc59f, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
+    - target: {fileID: 1239659455844450, guid: 74583c5879a995f449ea1f805a6bc59f, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 1310758835885424, guid: 74583c5879a995f449ea1f805a6bc59f, type: 3}
       propertyPath: m_Name
       value: Container_Blue
+      objectReference: {fileID: 0}
+    - target: {fileID: 1310758835885424, guid: 74583c5879a995f449ea1f805a6bc59f, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
+    - target: {fileID: 1414820542988460, guid: 74583c5879a995f449ea1f805a6bc59f, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
+    - target: {fileID: 1554666736537268, guid: 74583c5879a995f449ea1f805a6bc59f, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
       objectReference: {fileID: 0}
     - target: {fileID: 4093398997579478, guid: 74583c5879a995f449ea1f805a6bc59f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -35935,6 +36862,10 @@ PrefabInstance:
     - target: {fileID: 135316, guid: 4707581494a4031438fbad227829f0db, type: 3}
       propertyPath: m_Name
       value: Scaffolding (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 135316, guid: 4707581494a4031438fbad227829f0db, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
       objectReference: {fileID: 0}
     - target: {fileID: 438652, guid: 4707581494a4031438fbad227829f0db, type: 3}
       propertyPath: m_LocalPosition.x
@@ -36483,6 +37414,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cement
       objectReference: {fileID: 0}
+    - target: {fileID: 1375233789303162, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.180479
@@ -36879,7 +37814,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4583118223193562, guid: b6270179b89275543ba032d6176dfa81, type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 1203938213}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1801349130098206, guid: b6270179b89275543ba032d6176dfa81, type: 3}
       insertIndex: -1
@@ -36991,6 +37929,10 @@ PrefabInstance:
     - target: {fileID: 1841898010600736, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
       propertyPath: m_Name
       value: Wooden_Stand_B
+      objectReference: {fileID: 0}
+    - target: {fileID: 1841898010600736, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
       objectReference: {fileID: 0}
     - target: {fileID: 4351209550710614, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -37441,9 +38383,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8068073526183931155, guid: 3924fc14f08cfc242b8f6cb88d8d1a0e, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
+    - target: {fileID: -7318072807127031672, guid: 3924fc14f08cfc242b8f6cb88d8d1a0e, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
+    - target: {fileID: -2383057470141216921, guid: 3924fc14f08cfc242b8f6cb88d8d1a0e, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3924fc14f08cfc242b8f6cb88d8d1a0e, type: 3}
       propertyPath: m_Name
       value: model (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3924fc14f08cfc242b8f6cb88d8d1a0e, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
+    - target: {fileID: 3490315735572815953, guid: 3924fc14f08cfc242b8f6cb88d8d1a0e, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
+    - target: {fileID: 6037384984517086383, guid: 3924fc14f08cfc242b8f6cb88d8d1a0e, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -37733,13 +38699,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Garbage
       objectReference: {fileID: 0}
+    - target: {fileID: 1153904038062340, guid: 36185661c9efc3744a17898686b687bf, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 1524585419440478, guid: 36185661c9efc3744a17898686b687bf, type: 3}
       propertyPath: m_Name
       value: GarbageDoor_B
       objectReference: {fileID: 0}
+    - target: {fileID: 1524585419440478, guid: 36185661c9efc3744a17898686b687bf, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 1901638631687534, guid: 36185661c9efc3744a17898686b687bf, type: 3}
       propertyPath: m_Name
       value: GarbageDoor_A
+      objectReference: {fileID: 0}
+    - target: {fileID: 1901638631687534, guid: 36185661c9efc3744a17898686b687bf, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
       objectReference: {fileID: 0}
     - target: {fileID: 4616418588631314, guid: 36185661c9efc3744a17898686b687bf, type: 3}
       propertyPath: m_LocalScale.x
@@ -38840,6 +39818,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wooden_Stand_B
       objectReference: {fileID: 0}
+    - target: {fileID: 1841898010600736, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 4351209550710614, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -39116,7 +40098,7 @@ GameObject:
   - component: {fileID: 118465952150000013}
   m_Layer: 0
   m_Name: Scaffoldings (3)
-  m_TagString: Untagged
+  m_TagString: isPointed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39519,7 +40501,7 @@ GameObject:
   - component: {fileID: 4478231794989630573}
   m_Layer: 0
   m_Name: GameObject (2)
-  m_TagString: Untagged
+  m_TagString: isPointed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39769,6 +40751,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mixer
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3163551eec488544fb1789763565fa70, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 2667266169135530561, guid: 3163551eec488544fb1789763565fa70, type: 3}
       propertyPath: m_Name
       value: Mixer
@@ -39957,6 +40943,10 @@ PrefabInstance:
     - target: {fileID: 135316, guid: 4707581494a4031438fbad227829f0db, type: 3}
       propertyPath: m_Name
       value: Scaffolding (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 135316, guid: 4707581494a4031438fbad227829f0db, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
       objectReference: {fileID: 0}
     - target: {fileID: 438652, guid: 4707581494a4031438fbad227829f0db, type: 3}
       propertyPath: m_LocalPosition.x
@@ -42660,6 +43650,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scaffolding (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 135316, guid: 4707581494a4031438fbad227829f0db, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 438652, guid: 4707581494a4031438fbad227829f0db, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -43529,6 +44523,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scaffolding
       objectReference: {fileID: 0}
+    - target: {fileID: 135316, guid: 4707581494a4031438fbad227829f0db, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 438652, guid: 4707581494a4031438fbad227829f0db, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -43599,6 +44597,10 @@ PrefabInstance:
     - target: {fileID: 1375233789303162, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_Name
       value: Cement
+      objectReference: {fileID: 0}
+    - target: {fileID: 1375233789303162, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
       objectReference: {fileID: 0}
     - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -44156,7 +45158,7 @@ GameObject:
   - component: {fileID: 8986948461963080462}
   m_Layer: 0
   m_Name: Heap_mud (1)
-  m_TagString: Untagged
+  m_TagString: isPointed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44401,7 +45403,7 @@ GameObject:
   - component: {fileID: 1107507312454184591}
   m_Layer: 0
   m_Name: Scaffoldings (1)
-  m_TagString: Untagged
+  m_TagString: isPointed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44989,6 +45991,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cement
       objectReference: {fileID: 0}
+    - target: {fileID: 1375233789303162, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.018913269
@@ -45166,6 +46172,10 @@ PrefabInstance:
     - target: {fileID: 1375233789303162, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_Name
       value: Cement
+      objectReference: {fileID: 0}
+    - target: {fileID: 1375233789303162, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
       objectReference: {fileID: 0}
     - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -45649,6 +46659,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c3412978526fed54eb7041b046cb48c4, type: 3}
       propertyPath: m_Name
       value: BrickStack01
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c3412978526fed54eb7041b046cb48c4, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -46235,6 +47249,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cement
       objectReference: {fileID: 0}
+    - target: {fileID: 1375233789303162, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.1870613
@@ -46405,6 +47423,10 @@ PrefabInstance:
     - target: {fileID: 1841898010600736, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
       propertyPath: m_Name
       value: Wooden_Stand_B
+      objectReference: {fileID: 0}
+    - target: {fileID: 1841898010600736, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
       objectReference: {fileID: 0}
     - target: {fileID: 4351209550710614, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -46911,6 +47933,10 @@ PrefabInstance:
     - target: {fileID: 1375233789303162, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_Name
       value: Cement
+      objectReference: {fileID: 0}
+    - target: {fileID: 1375233789303162, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
       objectReference: {fileID: 0}
     - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -47462,6 +48488,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cement
       objectReference: {fileID: 0}
+    - target: {fileID: 1375233789303162, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.042930603
@@ -47961,6 +48991,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scaffolding
       objectReference: {fileID: 0}
+    - target: {fileID: 135316, guid: 4707581494a4031438fbad227829f0db, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 438652, guid: 4707581494a4031438fbad227829f0db, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -48156,6 +49190,10 @@ PrefabInstance:
     - target: {fileID: 1375233789303162, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_Name
       value: Cement
+      objectReference: {fileID: 0}
+    - target: {fileID: 1375233789303162, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
       objectReference: {fileID: 0}
     - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -49634,6 +50672,10 @@ PrefabInstance:
     - target: {fileID: 135316, guid: 4707581494a4031438fbad227829f0db, type: 3}
       propertyPath: m_Name
       value: Scaffolding (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 135316, guid: 4707581494a4031438fbad227829f0db, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
       objectReference: {fileID: 0}
     - target: {fileID: 438652, guid: 4707581494a4031438fbad227829f0db, type: 3}
       propertyPath: m_LocalPosition.x
@@ -51135,9 +52177,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8068073526183931155, guid: 3924fc14f08cfc242b8f6cb88d8d1a0e, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
+    - target: {fileID: -7318072807127031672, guid: 3924fc14f08cfc242b8f6cb88d8d1a0e, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
+    - target: {fileID: -2383057470141216921, guid: 3924fc14f08cfc242b8f6cb88d8d1a0e, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3924fc14f08cfc242b8f6cb88d8d1a0e, type: 3}
       propertyPath: m_Name
       value: model
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3924fc14f08cfc242b8f6cb88d8d1a0e, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
+    - target: {fileID: 3490315735572815953, guid: 3924fc14f08cfc242b8f6cb88d8d1a0e, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
+    - target: {fileID: 6037384984517086383, guid: 3924fc14f08cfc242b8f6cb88d8d1a0e, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -51228,6 +52294,10 @@ PrefabInstance:
     - target: {fileID: 1375233789303162, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_Name
       value: Cement
+      objectReference: {fileID: 0}
+    - target: {fileID: 1375233789303162, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
       objectReference: {fileID: 0}
     - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -52592,6 +53662,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scaffolding
       objectReference: {fileID: 0}
+    - target: {fileID: 135316, guid: 4707581494a4031438fbad227829f0db, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 438652, guid: 4707581494a4031438fbad227829f0db, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -52980,7 +54054,7 @@ GameObject:
   - component: {fileID: 6870167984782592597}
   m_Layer: 0
   m_Name: TruckMini
-  m_TagString: Untagged
+  m_TagString: isPointed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53142,6 +54216,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scaffolding (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 135316, guid: 4707581494a4031438fbad227829f0db, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 438652, guid: 4707581494a4031438fbad227829f0db, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -53226,8 +54304,8 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6821149463395791303}
   m_Mesh: {fileID: -2532609945749421305, guid: d0ba622d4ed0ae443a317ec9c8c5e08d, type: 3}
---- !u!64 &6870167984782592597
-MeshCollider:
+--- !u!65 &6870167984782592597
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -53244,10 +54322,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2532609945749421305, guid: d0ba622d4ed0ae443a317ec9c8c5e08d, type: 3}
+  serializedVersion: 3
+  m_Size: {x: 23.391874, y: 25.303377, z: 56.32013}
+  m_Center: {x: 18.539616, y: 0, z: -0.8210162}
 --- !u!4 &6899190430741829697
 Transform:
   m_ObjectHideFlags: 0
@@ -53631,7 +54708,7 @@ GameObject:
   - component: {fileID: 7758153906156273028}
   m_Layer: 0
   m_Name: Heap_rubble (1)
-  m_TagString: Untagged
+  m_TagString: isPointed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53861,7 +54938,7 @@ GameObject:
   - component: {fileID: 4153968226239357384}
   m_Layer: 0
   m_Name: Scaffoldings
-  m_TagString: Untagged
+  m_TagString: isPointed
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54136,6 +55213,10 @@ PrefabInstance:
     - target: {fileID: 1841898010600736, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
       propertyPath: m_Name
       value: Wooden_Stand_B
+      objectReference: {fileID: 0}
+    - target: {fileID: 1841898010600736, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
       objectReference: {fileID: 0}
     - target: {fileID: 4351209550710614, guid: cada6c7dd149a554db47e0cf3537b80a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -55114,6 +56195,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cement
       objectReference: {fileID: 0}
+    - target: {fileID: 1499310753839832, guid: 491d82b1acc78ba4d95af96a6fe1b5a8, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 4214389346116376, guid: 491d82b1acc78ba4d95af96a6fe1b5a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.3743134
@@ -55429,6 +56514,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cement
       objectReference: {fileID: 0}
+    - target: {fileID: 1375233789303162, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.0890007
@@ -55508,6 +56597,10 @@ PrefabInstance:
     - target: {fileID: 135316, guid: 4707581494a4031438fbad227829f0db, type: 3}
       propertyPath: m_Name
       value: Scaffolding (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 135316, guid: 4707581494a4031438fbad227829f0db, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
       objectReference: {fileID: 0}
     - target: {fileID: 438652, guid: 4707581494a4031438fbad227829f0db, type: 3}
       propertyPath: m_LocalScale.x
@@ -55606,6 +56699,10 @@ PrefabInstance:
     - target: {fileID: 1375233789303162, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_Name
       value: Cement
+      objectReference: {fileID: 0}
+    - target: {fileID: 1375233789303162, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
       objectReference: {fileID: 0}
     - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -56604,6 +57701,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cement
       objectReference: {fileID: 0}
+    - target: {fileID: 1375233789303162, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.180479
@@ -56808,6 +57909,10 @@ PrefabInstance:
     - target: {fileID: 135316, guid: 4707581494a4031438fbad227829f0db, type: 3}
       propertyPath: m_Name
       value: Scaffolding
+      objectReference: {fileID: 0}
+    - target: {fileID: 135316, guid: 4707581494a4031438fbad227829f0db, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
       objectReference: {fileID: 0}
     - target: {fileID: 438652, guid: 4707581494a4031438fbad227829f0db, type: 3}
       propertyPath: m_LocalPosition.x
@@ -61498,21 +62603,41 @@ PrefabInstance:
       propertyPath: m_Name
       value: Container_White
       objectReference: {fileID: 0}
+    - target: {fileID: 1206295022291930, guid: 74756895053b94f439fc7f707d6e3a99, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 1503647483837946, guid: 74756895053b94f439fc7f707d6e3a99, type: 3}
       propertyPath: m_Name
       value: Container_White
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503647483837946, guid: 74756895053b94f439fc7f707d6e3a99, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
       objectReference: {fileID: 0}
     - target: {fileID: 1549323966633376, guid: 74756895053b94f439fc7f707d6e3a99, type: 3}
       propertyPath: m_Name
       value: Container_White
       objectReference: {fileID: 0}
+    - target: {fileID: 1549323966633376, guid: 74756895053b94f439fc7f707d6e3a99, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 1647713705081162, guid: 74756895053b94f439fc7f707d6e3a99, type: 3}
       propertyPath: m_Name
       value: Container_White
       objectReference: {fileID: 0}
+    - target: {fileID: 1647713705081162, guid: 74756895053b94f439fc7f707d6e3a99, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 1650012751931904, guid: 74756895053b94f439fc7f707d6e3a99, type: 3}
       propertyPath: m_Name
       value: Container_White
+      objectReference: {fileID: 0}
+    - target: {fileID: 1650012751931904, guid: 74756895053b94f439fc7f707d6e3a99, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
       objectReference: {fileID: 0}
     - target: {fileID: 4107258266104582, guid: 74756895053b94f439fc7f707d6e3a99, type: 3}
       propertyPath: m_LocalPosition.x
@@ -61647,6 +62772,10 @@ PrefabInstance:
     - target: {fileID: 1375233789303162, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_Name
       value: Cement
+      objectReference: {fileID: 0}
+    - target: {fileID: 1375233789303162, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
       objectReference: {fileID: 0}
     - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -62311,6 +63440,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scaffolding (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 135316, guid: 4707581494a4031438fbad227829f0db, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
+      objectReference: {fileID: 0}
     - target: {fileID: 438652, guid: 4707581494a4031438fbad227829f0db, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -62679,6 +63812,10 @@ PrefabInstance:
     - target: {fileID: 1136039255361954, guid: 7d5203bee65999746a2724a098910ec2, type: 3}
       propertyPath: m_Name
       value: WoodPlanks
+      objectReference: {fileID: 0}
+    - target: {fileID: 1136039255361954, guid: 7d5203bee65999746a2724a098910ec2, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
       objectReference: {fileID: 0}
     - target: {fileID: 1180646977474904, guid: 7d5203bee65999746a2724a098910ec2, type: 3}
       propertyPath: m_Name
@@ -63185,6 +64322,10 @@ PrefabInstance:
     - target: {fileID: 1375233789303162, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_Name
       value: Cement
+      objectReference: {fileID: 0}
+    - target: {fileID: 1375233789303162, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
+      propertyPath: m_TagString
+      value: isPointed
       objectReference: {fileID: 0}
     - target: {fileID: 4426621380312076, guid: 72b8f7dbbc509dd4d918847a30b3e1f4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -64673,4 +65814,3 @@ SceneRoots:
   - {fileID: 406522916}
   - {fileID: 2112291451}
   - {fileID: 2096208693}
-  - {fileID: 1731462145}

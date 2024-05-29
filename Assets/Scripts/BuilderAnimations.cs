@@ -14,10 +14,10 @@ public class BuilderAnimations : MonoBehaviour
 
     static private AnimationManager animationManager;
     static private AudioManager audioManager;
+    private TaskManager taskManager;
 
 
-    public int scene = 0;
-    public bool[] seenScenes = new bool[] {false, false, false, false, false, false };
+    
 
     private float movementSpeed = 2f;
 
@@ -37,6 +37,7 @@ public class BuilderAnimations : MonoBehaviour
 
         animationManager = FindObjectOfType<AnimationManager>();
         audioManager = FindObjectOfType<AudioManager>();
+        taskManager = FindObjectOfType<TaskManager>();
 
         rb = GetComponent<Rigidbody>();
 
@@ -59,7 +60,7 @@ public class BuilderAnimations : MonoBehaviour
         rbConcreteTubes = GameObject.FindGameObjectWithTag("ConcreteTubes").GetComponent<Rigidbody>();
 
         
-        StartCoroutine(StartingScene(5));
+        //StartCoroutine(StartingScene(5));
 
 
 
@@ -91,7 +92,7 @@ public class BuilderAnimations : MonoBehaviour
         //}
             
 
-        if (!seenScenes[scene])
+        if (taskManager.isNotSeenScene())
         { 
             switch (number)
             { 
@@ -128,7 +129,7 @@ public class BuilderAnimations : MonoBehaviour
                     audioManager.Play("breakingRope");
                     animationManager.Play("Rope", "Falling");
                     rbConcreteTubes.useGravity = true;
-                    scene = number;
+                    taskManager.scene = number;
                     //StartCoroutine(FailingConcreteTubes(number));
                     return;
                 case 5:
@@ -140,8 +141,9 @@ public class BuilderAnimations : MonoBehaviour
                     animationManager.Play("Builder", "Walking");
                     animationManager.ChangeUpdateModeUnscaledTime("Builder");
                     break;
-            }        
-            scene = number;
+            }
+            taskManager.scene = number;
+
         
             obj.Show();
         }
@@ -151,13 +153,13 @@ public class BuilderAnimations : MonoBehaviour
     {
         yield return new WaitForSeconds(1.71f);
         
-        scene = number;
+        taskManager.scene = number;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if ((scene == 1) && (!seenScenes[scene]))
+        if (taskManager.StartNewScene(1))
         {
             Go(targetPosition1);
 
@@ -170,8 +172,7 @@ public class BuilderAnimations : MonoBehaviour
                 animationManager.Play("Builder", "Falling");
                 audioManager.Play("fallingWithSound");
 
-                seenScenes[scene] = true;
-                scene = 0;
+                taskManager.SceneComplete();
                 StartCoroutine(DisableCementAnimator());
 
 
@@ -179,7 +180,7 @@ public class BuilderAnimations : MonoBehaviour
             }
 
         }
-        else if ((scene == 2) && (!seenScenes[scene]))
+        else if (taskManager.StartNewScene(2))
         {
             Go(targetPosition2);
 
@@ -190,12 +191,11 @@ public class BuilderAnimations : MonoBehaviour
                 animationManager.Play("Builder", "FallingUp");
                 audioManager.Play("screamOfPain");
                 rb.useGravity = true;
-                seenScenes[scene] = true;
-                scene = 0;
+                taskManager.SceneComplete();
 
             }
         }
-        else if ((scene == 3) && (!seenScenes[scene]))
+        else if (taskManager.StartNewScene(3))
         {
             Go(targetPosition3);
 
@@ -203,14 +203,13 @@ public class BuilderAnimations : MonoBehaviour
             {
 
                 animationManager.Play("Builder", "Tripping");
-                seenScenes[scene] = true;
-                scene = 0;
+                taskManager.SceneComplete();
                 audioManager.Play("fallingWithSound");
                 StartCoroutine(FallingOnSand());
 
             }
         }
-        else if ((scene == 4) && (!seenScenes[scene]))
+        else if (taskManager.StartNewScene(4))
         {
 
             if (builder2Collision.isCollisioning)
@@ -224,8 +223,7 @@ public class BuilderAnimations : MonoBehaviour
                 animationManager.Play("Builder2", "Falling");
                 audioManager.Play("screamOfPain2");
                 objBuilder2.transform.localPosition = new Vector3(objBuilder2.transform.localPosition.x, objBuilder2.transform.localPosition.y - 0.1f, objBuilder2.transform.localPosition.z);
-                seenScenes[scene] = true;
-                scene = 0;
+                taskManager.SceneComplete();
 
                 if (objBuilder2.transform.localPosition.y <= -1.75f)
                 {
@@ -235,7 +233,7 @@ public class BuilderAnimations : MonoBehaviour
                 }
             }
         }
-        else if ((scene == 5) && (!seenScenes[scene]))
+        else if (taskManager.StartNewScene(5))
         {
             if (isNotTargetPosition)
             {
@@ -259,8 +257,7 @@ public class BuilderAnimations : MonoBehaviour
                 if (transform.position == targetPosition52)
                 {
                     animationManager.Play("Builder", "BeingElectrocuted");
-                    seenScenes[scene] = true;
-                    scene = 0;
+                    taskManager.SceneComplete();
                     StartCoroutine(FallingOnSand(5.8f));
                     StartCoroutine(FallingOnSand(4f));               
                     print("ok");
