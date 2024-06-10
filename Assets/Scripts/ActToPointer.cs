@@ -108,7 +108,7 @@ public class ActToPointer : MonoBehaviour
         switch (e.target.tag)
         {
             case "isPointed":
-                taskManager.MakeMistake();
+                //taskManager.MakeMistake();
                 break;
             case "WoodenCableDrum":
                 if (taskManager.isNotSeenScene(2))
